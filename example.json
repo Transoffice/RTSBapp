@@ -1,0 +1,25 @@
+{
+    "title": "Using Nested Lists in Sencha Touch 2",
+    "product": "touch",
+    "version": "2.0.0",
+    "path": "touch/2.0.0/guides/nestedlist.4/",
+    "categories": [
+        {
+            "label": "Sencha Touch"
+        },
+        {
+            "label": "Sencha Touch 2.0.0"
+        }
+    ],
+    "seeAlso": [],
+    "author": {
+        "name": "Sencha Inc.",
+        "github": "extjs",
+        "url": "http://sencha.com/",
+        "senchadevs": ""
+    },
+    "files": [
+        "app.js",
+        "index.html"
+    ]
+}

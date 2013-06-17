@@ -107,10 +107,13 @@ Ext.define('RTSB.app.view.Main', {
                         html: [
                                 '<div style="background-image:url(LastOne.jpg);height:1024px;width:100%;background-repeat:no-repeat;background-size: 100%;">'
 
-                    ].join("")
-}
-]
-}
+                        ].join("")
+
+        }
+    ]
+                    }
+
         ]
     }
 });
+
