@@ -76,7 +76,24 @@ Ext.application({
                         text: 'NextBound',
                         leaf: true
                     }]
-                }, {
+                },
+                {
+                    text: 'Info',
+                    items: [{
+                        text: 'Eastbound',
+                        items: [{
+                            text: 'Still',
+                            leaf: true
+                        }, {
+                            text: 'WestBound',
+                            leaf: true
+                        }]
+                    }, {
+                        text: 'NextBound',
+                        leaf: true
+                    }]
+                },
+                {
                     text: 'Language',
                     items: [{
                         text: 'Russisch',

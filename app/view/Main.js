@@ -109,8 +109,8 @@ Ext.define('RTSB.app.view.Main', {
 
                         ].join("")
 
-        }
-    ]
+                    }
+                    ]
                     }
 
         ]
