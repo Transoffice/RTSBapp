@@ -126,11 +126,7 @@ Ext.application({
             flex: 1
         });
 
-        Ext.Viewport.add({
-            layout: 'hbox',
-            items: [
-            nestedList, detailContainer]
-        });
+
 
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
