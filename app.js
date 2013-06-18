@@ -62,7 +62,7 @@ Ext.application({
             defaultRootProperty: 'items',
             root: {
                 items: [{
-                    text: 'Info',
+                    text: 'Eastbound Leitwege & Dienstleistungen Europa - Russland - Zentralasien',
                     items: [{
                         text: 'Eastbound',
                         items: [{
