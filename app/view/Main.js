@@ -8,13 +8,21 @@ Ext.define('RTSB.app.view.Main', {
     config: {
         tabBarPosition: 'bottom',
 
+
+
+        onNewButtonTap: function ()
+        {
+            //console.log("newNoteCommand");
+            //this.fireEvent("newNoteCommand", this);
+            Ext.Viewport.add(Ext.create('RTSB.app.view.Nested'));
+        },
         items: [
             {
                 title: 'Welcome',
                 iconCls: 'home',
 
                 styleHtmlContent: true,
-                scrollable: true,
+                scrollable: false,
 
                 items: {
                     docked: 'top',
@@ -37,7 +45,7 @@ Ext.define('RTSB.app.view.Main', {
                         xtype: 'titlebar',
                         title: 'Getting Started',
                         styleHtmlContent: true,
-                         scrollable: true,
+                        scrollable: true,
                     },
                     {
                         xtype: 'video',
@@ -91,12 +99,122 @@ Ext.define('RTSB.app.view.Main', {
                             ]
                         },
                         {
-                            title: 'NextOne',
+                            title: 'Nested List',
                             iconCls: 'action',
+                            //items: [nestedList, detailContainer],
+                            items: [
+                            {
+                                docked: 'top',
+                                xtype: 'titlebar',
+                                title: 'Nested List',
+                                styleHtmlContent: true,
+                                scrollable: true,
+                            },
+                            {
+                                items: [{ xtype: "spacer"}, 
+                                {
+                                    xtype: "button",
+                                    text: "New",                
+                                    ui: "action",                
+                                   // id: "new-note-btn",
+                                    handler: this.onNewButtonTap,
+                                    scope: this,
+                                    views: ["nestedList", "detailContainer"],
+                                
+                                },
+
+                                ]
+
+                            },
+
+                            ]
+
                         }
-  
+                        
 
         ]
     }
 });
 
+
+Ext.define('ListItem', {
+    extend: 'Ext.data.Model',
+    config: {
+        fields: ['text']
+    }
+});
+var treeStore = Ext.create('Ext.data.TreeStore', {
+    model: 'ListItem',
+    defaultRootProperty: 'items',
+    root: {
+        items: [{
+            text: 'Info',
+            items: [{
+                text: 'Eastbound',
+                items: [{
+                    text: 'Still',
+                    leaf: true
+                }, {
+                    text: 'WestBound',
+                    leaf: true
+                }]
+            }, {
+                text: 'NextBound',
+                leaf: true
+            }]
+        },
+        {
+            text: 'Info',
+            items: [{
+                text: 'Eastbound',
+                items: [{
+                    text: 'Still',
+                    leaf: true
+                }, {
+                    text: 'WestBound',
+                    leaf: true
+                }]
+            }, {
+                text: 'NextBound',
+                leaf: true
+            }]
+        },
+        {
+            text: 'Language',
+            items: [{
+                text: 'Russisch',
+                leaf: true
+            }, {
+                text: 'Deutsch',
+                leaf: true
+            }, {
+                text: 'English',
+                leaf: true
+            }]
+        }]
+    }
+});
+var detailContainer = Ext.create('Ext.Container', {
+    layout: 'card',
+    flex: 1
+});
+
+var nestedList = Ext.create('Ext.NestedList', {
+    store: treeStore,
+    detailContainer: detailContainer,
+    detailCard: true,
+    listeners: {
+        leafitemtap: function (nestedList, list, index, target, record) {
+            var detailCard = nestedList.getDetailCard();
+            detailCard.setHtml('You selected: ' + record.get('text'));
+        }
+    },
+    flex: 1
+});
+var newButton = {
+    xtype: "button",
+    text: 'New',
+    ui: 'action',
+    handler: this.onNewButtonTap,
+    scope: this
+};

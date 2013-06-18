@@ -1,0 +1,105 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "ui": "dark",
+        "designer|userClassName": "MyNavigationView",
+        "designer|initialView": true
+    },
+    "designerId": "e9fc2ebf-b2e7-44f6-b446-aba8265cf3ce",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Welcome to RSTB.app",
+                "html": "<div style=\"background-image:url(metadata/resource/Logo_RTSB_GmbH_Slogan.png);height:100%;width:100%;background-repeat:no-repeat;background-size: contain;\">",
+                "styleHtmlContent": true,
+                "url": ""
+            },
+            "designerId": "c9e4c5c7-6f71-4610-9690-b265965f3846",
+            "cn": [
+                {
+                    "type": "Ext.Toolbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|pack": "center",
+                        "docked": "bottom"
+                    },
+                    "designerId": "76cdf657-9ee7-4ad4-869a-245176657cb0",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "Deutsch",
+                                "text": "Deutsch"
+                            },
+                            "designerId": "481d5066-24f2-4c82-99b2-290e0d52f45f",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonDeutsch",
+                                        "implHandler": [
+                                            "this.push(Ext.create(\"RTSB.view.NestedList\"), {\r",
+                                            "    title: \"NestedList\"\r",
+                                            "});"
+                                        ],
+                                        "name": "tap"
+                                    },
+                                    "designerId": "1e0303c9-3821-4146-81ee-1f00428d0e79"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "text": "English"
+                            },
+                            "designerId": "a096c860-2120-4a15-92d3-351be938330c"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "text": "Russisch"
+                            },
+                            "designerId": "b365a173-92f2-4efc-9765-2638e4e568af"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

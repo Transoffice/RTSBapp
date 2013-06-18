@@ -1,0 +1,152 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NestedList"
+    },
+    "designerId": "370c991f-46f0-40e3-8d1c-a675760cfa52",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Nested List"
+            },
+            "designerId": "37026e44-0740-49c4-aad0-85a3a5ab59ee",
+            "cn": [
+                {
+                    "type": "Ext.tab.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "bottom"
+                    },
+                    "designerId": "0c13282d-ce6b-45c0-a54a-f0049193e390",
+                    "cn": [
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "title": "About",
+                                "iconCls": "home",
+                                "itemId": "mycontainer36"
+                            },
+                            "designerId": "27e408eb-040e-4b9b-8a76-6bbebd9b15d4"
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "title": "Settings",
+                                "iconCls": "settings"
+                            },
+                            "designerId": "0269c17a-8db8-48b3-b1df-9726f3e79049"
+                        },
+                        {
+                            "type": "Ext.TitleBar",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "user",
+                                "itemId": "mycontainer38",
+                                "title": "User"
+                            },
+                            "designerId": "c83c21ad-a1eb-4f44-ba34-c92960368cd0"
+                        },
+                        {
+                            "type": "Ext.tab.Bar",
+                            "reference": {
+                                "name": "tabBar",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": "bottom"
+                            },
+                            "designerId": "4ed679df-42e8-4c88-9938-92c7ec4af38f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "mybutton19",
+                        "text": "Eastbound Routes & Services Europe – Russland – Zentralasien"
+                    },
+                    "designerId": "46104b24-3c42-415f-aae8-5f13be69ecd9",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onMybutton19Tap",
+                                "implHandler": [
+                                    "this.push(Ext.create(\"RTSB.view.EastBound\"), {\r",
+                                    "    title: \"NestedList\"\r",
+                                    "});"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "550581e3-391d-48b3-b955-2e17550bbfbf"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "text": "China Routes & Services"
+                    },
+                    "designerId": "4e782d1b-9de9-41fc-be51-c11e880a00bb"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "text": "RZD Frachtzahlercode"
+                    },
+                    "designerId": "e9b967d0-8ba8-4aba-860e-8cc9b05fd464"
+                }
+            ]
+        }
+    ]
+}
