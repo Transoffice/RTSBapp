@@ -15,43 +15,26 @@
 
 Ext.define('RTSB.view.EWG', {
     extend: 'Ext.navigation.View',
-
     config: {
         items: [
             {
-                xtype: 'formpanel',
-                title: 'EWG',
+                xtype: 'tabpanel',
                 items: [
                     {
-                        xtype: 'toolbar',
-                        docked: 'top',
-                        layout: {
-                            pack: 'center',
-                            type: 'hbox'
-                        },
-                        items: [
-                            {
-                                xtype: 'tabpanel',
-                                items: [
-                                    {
-                                        xtype: 'container',
-                                        title: 'Option 1'
-                                    },
-                                    {
-                                        xtype: 'container',
-                                        title: 'Option 2'
-                                    },
-                                    {
-                                        xtype: 'container',
-                                        title: 'Option 3'
-                                    }
-                                ]
-                            }
-                        ]
+                        xtype: 'container',
+                        title: 'Map',
+                        html: [
+                                                       '<div style="background-image:url(resources/loading/RTSB_Eastbound_EU-BY-GUS.png);height:1024px;width:100%;background-repeat:no-repeat;background-size: 100%;">'
+
+                        ].join("")
                     },
                     {
-                        xtype: 'map',
-                        height: 385
+                        xtype: 'container',
+                        title: 'Details',
+                        html: [
+                                 '<div style="background-image:url(resources/loading/DBGDetails.jpg);height:1024px;width:100%;background-repeat:no-repeat;background-size: 100%;">'
+
+                        ].join("")
                     }
                 ]
             }

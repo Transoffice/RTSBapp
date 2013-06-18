@@ -19,41 +19,23 @@ Ext.define('RTSB.view.EBG', {
     config: {
         items: [
             {
-                xtype: 'formpanel',
-                title: 'EBG',
+                xtype: 'tabpanel',
                 items: [
                     {
-                        xtype: 'toolbar',
-                        docked: 'top',
-                        layout: {
-                            pack: 'center',
-                            type: 'hbox'
-                        },
-                        items: [
-                            {
-                                xtype: 'tabpanel',
-                                items: [
-                                    {
-                                        xtype: 'container',
-                                        title: 'Option 1'
-                                    },
-                                    {
-                                        xtype: 'container',
-                                        title: 'Option 2'
-                                    },
-                                    {
-                                        xtype: 'container',
-                                        title: 'Option 3'
-                                    }
-                                ]
-                            }
-                        ]
+                        xtype: 'container',
+                        title: 'Map',
+                        html: [
+                                '<div style="background-image:url(resources/loading/RTSB_Eastbound_EU-BALTIKUM-GUS.png);height:1024px;width:100%;background-repeat:no-repeat;background-size: 100%;">'
+
+                        ].join("")
                     },
                     {
-                        xtype: 'map',
-                        docked: 'top',
-                        height: 383,
-                        ui: 'dark'
+                        xtype: 'container',
+                        title: 'Details',
+                        html: [
+                                '<div style="background-image:url(resources/loading/DBGDetails.jpg);height:1024px;width:100%;background-repeat:no-repeat;background-size: 100%;">'
+
+                        ].join("")
                     }
                 ]
             }

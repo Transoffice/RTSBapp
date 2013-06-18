@@ -32,12 +32,11 @@ Ext.define('RTSB.view.NestedList', {
                         xtype: 'button',
                         itemId: 'mybutton20',
                         text: 'Europa –> Baltikum –> GUS'
-                    },
+                    }/*,
                     {
                         xtype: 'button',
-                        itemId: 'mybutton21',
-                        text: 'Europa –> Ukraine –> GUS'
-                    }
+                        text: 'RZD Frachtzahlercode'
+                    }*/
                 ]
             }
         ],
@@ -52,12 +51,7 @@ Ext.define('RTSB.view.NestedList', {
                             fn: 'onMybutton20Tap',
                             event: 'tap',
                             delegate: '#mybutton20'
-                        },
-                                                {
-                                                    fn: 'onMybutton21Tap',
-                                                    event: 'tap',
-                                                    delegate: '#mybutton21'
-                                                }
+                        }
         ]
     },
 
@@ -70,10 +64,5 @@ Ext.define('RTSB.view.NestedList', {
     this.push(Ext.create("RTSB.view.EBG"), {
         title: "NestedList"
     });
-    },
-    onMybutton21Tap: function (button, e, eOpts) {
-        this.push(Ext.create("RTSB.view.EUG"), {
-            title: "NestedList"
-        });
-    }
+}
 });
