@@ -62,7 +62,7 @@ Ext.application({
             defaultRootProperty: 'items',
             root: {
                 items: [{
-                    text: 'Eastbound Leitwege & Dienstleistungen Europa - Russland - Zentralasien',
+                    text: 'Eastbound Leitwege & Dienstleistungen: Europa - Russland - Zentralasien',
                     items: [{
                         text: 'Eastbound',
                         items: [{
@@ -78,7 +78,7 @@ Ext.application({
                     }]
                 },
                 {
-                    text: 'Info',
+                    text: 'China Leitwege & Dienstleistungen',
                     items: [{
                         text: 'Eastbound',
                         items: [{
@@ -94,7 +94,7 @@ Ext.application({
                     }]
                 },
                 {
-                    text: 'Language',
+                    text: 'RZD Frachtzahlercodes',
                     items: [{
                         text: 'Russisch',
                         leaf: true
