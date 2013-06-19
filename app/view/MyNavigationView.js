@@ -76,11 +76,43 @@ Ext.define('RTSB.view.MyNavigationView', {
             },
                         {
                             xtype: 'container',
-                            title: 'Englisch'
+                            title: 'Englisch',
+                            items: [
+                                {
+                                    xtype: 'button',
+                                    itemId: 'EnglishButton',
+                                    text: 'Eastbound Routes & Services Europe – Russland – Zentralasien',
+                                    ui: 'action',
+
+                                 },
+                {
+                    xtype: 'button',
+                    itemId: 'EnglishChinaButton',
+                    text: 'China Routes & Services',
+                    ui: 'action',
+
+                }
+                            ]
                         },
             {
-                xtype: 'container',
-                title: 'Russisch'
+                            xtype: 'container',
+                            title: 'Russisch',
+                            items: [
+                                    {
+                                        xtype: 'button',
+                                        itemId: 'RUButton',
+                                        text: 'Eastbound Routes & Services Europe – Russland – Zentralasien',
+                                        ui: 'action',
+
+                                    },
+                                    {
+                                        xtype: 'button',
+                                        itemId: 'RUChinaButton',
+                                        text: 'China Routes & Services',
+                                        ui: 'action',
+
+                                    }
+                ]
             }
         ]
     }
@@ -95,6 +127,26 @@ Ext.define('RTSB.view.MyNavigationView', {
                     fn: 'onMybutton12Tap',
                     event: 'tap',
                     delegate: '#mybutton12',
+                },
+                {
+                    fn: 'onMyEnglishbuttonTap',
+                    event: 'tap',
+                    delegate: '#EnglishButton',
+                },
+                {
+                    fn: 'onMyEnglishChinabuttonTap',
+                    event: 'tap',
+                    delegate: '#EnglishChinaButton',
+                },
+                {
+                    fn: 'onMyRUbuttonTap',
+                    event: 'tap',
+                    delegate: '#RUButton',
+                },
+                {
+                    fn: 'onMyRUChinabuttonTap',
+                    event: 'tap',
+                    delegate: '#RUChinaButton',
                 }
 
   ]
@@ -109,6 +161,26 @@ Ext.define('RTSB.view.MyNavigationView', {
     },
     onMybutton12Tap: function (button, e, eOpts) {
         this.push(Ext.create("RTSB.view.CNEU"), {
+            title: "NestedList"
+        });
+    },
+    onMyEnglishbuttonTap: function (button, e, eOpts) {
+        this.push(Ext.create("RTSB.view.NestedListEN"), {
+            title: "NestedList"
+        });
+    },
+    onMyEnglishChinabuttonTap: function (button, e, eOpts) {
+        this.push(Ext.create("RTSB.view.CNEUEN"), {
+            title: "NestedList"
+        });
+    },
+    onMyRUbuttonTap: function (button, e, eOpts) {
+        this.push(Ext.create("RTSB.view.NestedListRU"), {
+            title: "NestedList"
+        });
+    },
+    onMyRUChinabuttonTap: function (button, e, eOpts) {
+        this.push(Ext.create("RTSB.view.CNEURU"), {
             title: "NestedList"
         });
     },
