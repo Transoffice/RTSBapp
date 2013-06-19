@@ -28,6 +28,13 @@ Ext.application({
         'EUG',
         'Impressum'
     ],
+        isIconPrecomposed: false,
+    icon: {
+        57: 'resources/icons/icon.png',
+        72: 'resources/icons/icon@72.png',
+        114: 'resources/icons/icon@2x.png',
+        144: 'resources/icons/icon@144.png'
+    },
     name: 'RTSB',
 
     launch: function() {

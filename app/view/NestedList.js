@@ -17,6 +17,9 @@ Ext.define('RTSB.view.NestedList', {
     extend: 'Ext.navigation.View',
 
     config: {
+        navigationBar: {
+            hidden: true
+        },
         title: 'Nested List',
         items: [
             {
@@ -48,20 +51,21 @@ Ext.define('RTSB.view.NestedList', {
                 delegate: '#mybutton19',
                 useToolbar: false
             },
-                        {
-                            fn: 'onMybutton20Tap',
-                            event: 'tap',
-                            delegate: '#mybutton20'
-                        },
-                                                {
-                                                    fn: 'onMybutton21Tap',
-                                                    event: 'tap',
-                                                    delegate: '#mybutton21'
-                                                }
+            {
+                fn: 'onMybutton20Tap',
+                event: 'tap',
+                delegate: '#mybutton20'
+            },
+            {
+                fn: 'onMybutton21Tap',
+                event: 'tap',
+                delegate: '#mybutton21'
+            }
         ]
     },
 
-    onMybutton19Tap: function(button, e, eOpts) {
+    onMybutton19Tap: function (button, e, eOpts) {
+       // Ext.select('.x-button-back').hide();
         this.push(Ext.create("RTSB.view.EWG"), {
             title: "NestedList"
         });

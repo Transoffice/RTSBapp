@@ -16,6 +16,9 @@
 Ext.define('RTSB.view.EWGRU', {
     extend: 'Ext.navigation.View',
     config: {
+        navigationBar: {
+            hidden: true
+        },
         items: [
             {
                 xtype: 'tabpanel',

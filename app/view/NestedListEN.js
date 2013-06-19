@@ -17,6 +17,9 @@ Ext.define('RTSB.view.NestedListEN', {
     extend: 'Ext.navigation.View',
 
     config: {
+        navigationBar: {
+            hidden: true
+        },
         title: 'Nested ListEN',
         items: [
             {

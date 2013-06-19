@@ -1,5 +1,6 @@
 ﻿Ext.regApplication({
     name: 'memoBook',
+
     launch: function() {
         this.views.viewport = new memoBook.views.Viewport({
             application: this

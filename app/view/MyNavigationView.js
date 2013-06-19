@@ -48,7 +48,7 @@ Ext.define('RTSB.view.MyNavigationView', {
                     {
                         xtype: 'video',
                         html: [
-                            '<div style="background-image:url(resources/loading/Loading_Preview.png);height:1024px;width:100%;background-repeat:no-repeat;background-size: 100%;">'
+                            '<div style="background-image:url(resources/loading/RTSBapp_loading_bg.png);height:1024px;width:100%;background-repeat:no-repeat;background-size: 100%;">'
 
                         ].join("")
                     }
@@ -63,6 +63,7 @@ Ext.define('RTSB.view.MyNavigationView', {
                     itemId: 'mybutton11',
                     text: 'Eastbound Routes & Services Europe – Russland – Zentralasien',
                     ui: 'action',
+                    height: '50px',
 
                 },
                                 {

@@ -16,6 +16,9 @@
 Ext.define('RTSB.view.CNEUEN', {
     extend: 'Ext.navigation.View',
     config: {
+        navigationBar: {
+            hidden: true
+        },
         items: [
             {
                 xtype: 'tabpanel',
@@ -24,7 +27,7 @@ Ext.define('RTSB.view.CNEUEN', {
                         xtype: 'container',
                         title: 'Map',
                         html: [
-                                                       '<div style="background-image:url(resources/loading/RTSB_Eastbound_EU-BY-GUS.png);height:1024px;width:100%;background-repeat:no-repeat;background-size: 100%;">'
+                                                       '<div style="background-image:url(resources/loading/RTSB_Westbound_CHINA-EU.png);height:1024px;width:100%;background-repeat:no-repeat;background-size: 100%;">'
 
                         ].join("")
                     },

@@ -16,6 +16,9 @@
 Ext.define('RTSB.view.CNEU', {
     extend: 'Ext.navigation.View',
     config: {
+        navigationBar: {
+            hidden: true
+        },
         items: [
             {
                 xtype: 'tabpanel',
@@ -24,21 +27,44 @@ Ext.define('RTSB.view.CNEU', {
                         xtype: 'container',
                         title: 'Map',
                         html: [
-                                                       '<div style="background-image:url(resources/loading/RTSB_Eastbound_EU-BY-GUS.png);height:1024px;width:100%;background-repeat:no-repeat;background-size: 100%;">'
+                                                       '<div style="background-image:url(resources/loading/RTSB_Westbound_CHINA-EU.png);height:1024px;width:100%;background-repeat:no-repeat;background-size: 100%;">'
 
                         ].join("")
                     },
                     {
                         xtype: 'container',
                         title: 'Details',
-                        html: [
+
+                        /*html: [
                                  '<div style="background-image:url(resources/loading/DBGDetails.jpg);height:1024px;width:100%;background-repeat:no-repeat;background-size: 100%;">'
 
-                        ].join("")
+                        ].join("")*/
+                        items: [
+                                {
+                                    xtype: 'button',
+                                    itemId: 'myImage',
+                                    text: 'Image',
+                                    ui: 'action',
+
+                                }
+                        ]
                     }
                 ]
             }
-        ]
-    }
-
+        ],
+        listeners: [
+                    {
+                        fn: 'onImageClick',
+                        event: 'tap',
+                        delegate: '#myImage'
+                    }
+                    ]
+    },
+    onImageClick: function (button, e, eOpts)
+    {
+       // this.hide();
+        this.push(Ext.create("RTSB.view.MyImg"), {
+            title: "NestedList"
+        });
+    },
 });
