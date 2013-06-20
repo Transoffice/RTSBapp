@@ -38,7 +38,7 @@ Ext.define('RTSBapp.view.EBGEN', {
                                 maxWidth: '100%',
                                 minHeight: '100%',
                                 minWidth: '100%',
-                                src: 'http://192.168.111.221/touch/apps/RTSB/resources/loading/RTSB_Eastbound_EU-BALTIKUM-GUS.png',
+                                src: 'resources/loading/RTSB_Eastbound_EU-BALTIKUM-GUS.png',
 
                                 //src: 'http://192.168.111.221/touch/apps/RTSB/resources/loading/RTSBapp_loading_bg.png'
                             }
@@ -59,7 +59,7 @@ Ext.define('RTSBapp.view.EBGEN', {
                                     maxWidth: '100%',
                                     minHeight: '100%',
                                     minWidth: '100%',
-                                    src: 'http://192.168.111.221/touch/apps/RTSB/resources/loading/DBGDetails.jpg',
+                                    src: 'resources/loading/DBGDetails.jpg',
 
                                     //src: 'http://192.168.111.221/touch/apps/RTSB/resources/loading/RTSBapp_loading_bg.png'
                                 }

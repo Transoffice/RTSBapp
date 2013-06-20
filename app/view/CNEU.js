@@ -39,9 +39,9 @@ Ext.define('RTSBapp.view.CNEU', {
                                 maxWidth: '100%',
                                 minHeight: '100%',
                                 minWidth: '100%',
-                                src: 'http://192.168.111.221/touch/apps/RTSB/resources/loading/RTSB_Westbound_CHINA-EU.png',
+                                src: 'resources/loading/RTSB_Westbound_CHINA-EU.png',
 
-                                //src: 'http://192.168.111.221/touch/apps/RTSB/resources/loading/RTSBapp_loading_bg.png'
+                                //src: 'http://127.0.0.1/touch/apps/RTSB/resources/loading/RTSBapp_loading_bg.png'
                             }
                         ]
                     },
@@ -60,9 +60,9 @@ Ext.define('RTSBapp.view.CNEU', {
                                     maxWidth: '100%',
                                     minHeight: '100%',
                                     minWidth: '100%',
-                                    src: 'http://192.168.111.221/touch/apps/RTSB/resources/loading/DBGDetails.jpg',
+                                    src: 'resources/loading/DBGDetails.jpg',
 
-                                    //src: 'http://192.168.111.221/touch/apps/RTSB/resources/loading/RTSBapp_loading_bg.png'
+                                    //src: 'http://127.0.0.1/touch/apps/RTSB/resources/loading/RTSBapp_loading_bg.png'
                                 }
                         ]
                     }
