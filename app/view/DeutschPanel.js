@@ -54,6 +54,9 @@ Ext.define('RTSBapp.view.DeutschPanel', {
                             items: [
                                 {
                                     xtype: 'button',
+                                    //style: 'background-image: url (resources/loading/info_icon_2.png) no-repeat',
+                                    style: 'background-image:url(resources/loading/info_icon_2.png);background-repeat:no-repeat;background-size: 40%;background-position: center;',
+                                   // cursor: pointer,
                                     itemId: 'Impressum',
                                     icon: 'true',
                                     iconAlign: 'center',

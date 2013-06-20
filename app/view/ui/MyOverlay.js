@@ -34,8 +34,9 @@ Ext.define('RTSBapp.view.ui.MyOverlay', {
                 'Geschäftsführer: Artur Ballardt</p>',
         styleHtmlContent: true,
         modal: true,
+        scrollable: 'vertical',
         height: '80%',
-        width: '50%',
+        width: '80%',
         items: [
             {
                 xtype: 'toolbar',
