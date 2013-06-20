@@ -13,8 +13,9 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('RTSB.view.CNEU', {
+Ext.define('RTSBapp.view.CNEU', {
     extend: 'Ext.navigation.View',
+    requires: ['Ext.TitleBar', 'Ext.ux.PinchZoomImage'],
     config: {
         navigationBar: {
             hidden: true
@@ -26,45 +27,48 @@ Ext.define('RTSB.view.CNEU', {
                     {
                         xtype: 'container',
                         title: 'Map',
-                        html: [
-                                                       '<div style="background-image:url(resources/loading/RTSB_Westbound_CHINA-EU.png);height:1024px;width:100%;background-repeat:no-repeat;background-size: 100%;">'
+                        style: 'background-color:#000',
+                        items: [
+                            {
+                                xtype: 'pinchzoomimage',
+                                layout: 'card',
+                                centered: true,
+                                style: 'background-color:#000;overflow: hidden;',
+                                height: 383,
+                                maxHeight: '100%',
+                                maxWidth: '100%',
+                                minHeight: '100%',
+                                minWidth: '100%',
+                                src: 'http://192.168.111.221/touch/apps/RTSB/resources/loading/RTSB_Westbound_CHINA-EU.png',
 
-                        ].join("")
+                                //src: 'http://192.168.111.221/touch/apps/RTSB/resources/loading/RTSBapp_loading_bg.png'
+                            }
+                        ]
                     },
                     {
                         xtype: 'container',
                         title: 'Details',
 
-                        /*html: [
-                                 '<div style="background-image:url(resources/loading/DBGDetails.jpg);height:1024px;width:100%;background-repeat:no-repeat;background-size: 100%;">'
-
-                        ].join("")*/
                         items: [
                                 {
-                                    xtype: 'button',
-                                    itemId: 'myImage',
-                                    text: 'Image',
-                                    ui: 'action',
+                                    xtype: 'pinchzoomimage',
+                                    layout: 'card',
+                                    centered: true,
+                                    style: 'background-color:#000;overflow: hidden;',
+                                    height: 383,
+                                    maxHeight: '100%',
+                                    maxWidth: '100%',
+                                    minHeight: '100%',
+                                    minWidth: '100%',
+                                    src: 'http://192.168.111.221/touch/apps/RTSB/resources/loading/DBGDetails.jpg',
 
+                                    //src: 'http://192.168.111.221/touch/apps/RTSB/resources/loading/RTSBapp_loading_bg.png'
                                 }
                         ]
                     }
                 ]
             }
-        ],
-        listeners: [
-                    {
-                        fn: 'onImageClick',
-                        event: 'tap',
-                        delegate: '#myImage'
-                    }
-                    ]
-    },
-    onImageClick: function (button, e, eOpts)
-    {
-       // this.hide();
-        this.push(Ext.create("RTSB.view.MyImg"), {
-            title: "NestedList"
-        });
-    },
+        ]
+    }
+
 });
