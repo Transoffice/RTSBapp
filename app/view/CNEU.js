@@ -34,11 +34,12 @@ Ext.define('RTSBapp.view.CNEU', {
                                 layout: 'card',
                                 centered: true,
                                 style: 'background-color:#000;overflow: hidden;',
-                                height: 383,
-                                maxHeight: '100%',
-                                maxWidth: '100%',
-                                minHeight: '100%',
-                                minWidth: '100%',
+                                height: '100%',
+                                width: '100%',
+                                //maxHeight: '100%',
+                                //maxWidth: '100%',
+                                //minHeight: '100%',
+                                //minWidth: '100%',
                                 src: 'resources/loading/RTSB_Westbound_CHINA-EU.png',
 
                                 //src: 'http://127.0.0.1/touch/apps/RTSB/resources/loading/RTSBapp_loading_bg.png'
