@@ -15,7 +15,11 @@
 
 Ext.define('RTSBapp.view.EUG', {
     extend: 'Ext.navigation.View',
-    requires: ['Ext.TitleBar', 'Ext.ux.PinchZoomImage'],
+    requires: [
+        'Ext.TitleBar',
+        'Ext.ux.PinchZoomImage',
+        'Ext.Video'
+    ],
     config: {
         navigationBar: {
             hidden: true
@@ -27,41 +31,59 @@ Ext.define('RTSBapp.view.EUG', {
                     {
                         xtype: 'container',
                         title: 'Map',
+                        style: 'background-color:#000',
                         items: [
                             {
+                                // id: 'landscapeFormFields',
+                                id: 'portraitFormFields',
                                 xtype: 'pinchzoomimage',
                                 layout: 'card',
                                 centered: true,
                                 style: 'background-color:#000;overflow: hidden;',
-                                height: 383,
-                                maxHeight: '100%',
-                                maxWidth: '100%',
-                                minHeight: '100%',
-                                minWidth: '100%',
+                                height: '100%',
+                                width: '100%',
+                                //maxHeight: '100%',
+                                //maxWidth: '100%',
+                                //minHeight: '100%',
+                                //minWidth: '100%',
                                 src: 'resources/loading/RTSB_Eastbound_EU-UA-GUS.png',
 
-                                //src: 'http://192.168.111.221/touch/apps/RTSB/resources/loading/RTSBapp_loading_bg.png'
+                                //src: 'http://127.0.0.1/touch/apps/RTSB/resources/loading/RTSBapp_loading_bg.png'
                             }
                         ]
                     },
                     {
                         xtype: 'container',
                         title: 'Details',
+                        scrollable: 'vertical',
+                        style: 'background-color:#000;overflow: hidden;',
+                        html: [
+                                '<div style="background-image:url(resources/loading/Details_bg.png);height:1024px;width:100%;background-repeat:no-repeat;background-size: 100%;">'
 
+                        ].join(""),
                         items: [
                                 {
-                                    xtype: 'pinchzoomimage',
+                                    xtype: 'image',
                                     layout: 'card',
                                     centered: true,
-                                    style: 'background-color:#000;overflow: hidden;',
-                                    height: 383,
+                                    //style: 'background-color:#000;overflow: hidden;',
                                     maxHeight: '100%',
                                     maxWidth: '100%',
                                     minHeight: '100%',
                                     minWidth: '100%',
-                                    src: 'resources/loading/DBGDetails.jpg',
-
-                                    //src: 'http://192.168.111.221/touch/apps/RTSB/resources/loading/RTSBapp_loading_bg.png'
+                                    // src: 'resources/loading/Details_bg.png',
+                                    centered: true,
+                                    html: '<p>' +
+                                            '<strong><font size="5">Baltikum / Tallinn / Riga / Vilnius:</font></strong><br><br>' +
+                                            '<font size="3">- Umladung in russische Bahnwaggons<br>' +
+                                            '- Bereitstellung von UZUU- Container <br>' +
+                                            '- Lagermoeglichkeiten in Sopron / Tchop/ Kiew <br>' +
+                                            '- Ganzzugformierung ab Sorpon und Tchop<br>' +
+                                            '- Deklarations<br>' +
+                                            '- Zollangelegenheiten via Ukraine<br><br>' +
+                                            '</font></p>',
+                                    styleHtmlContent: true,
+                                    //src: 'http://127.0.0.1/touch/apps/RTSB/resources/loading/Details_bg.png'
                                 }
                         ]
                     }

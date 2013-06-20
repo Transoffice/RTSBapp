@@ -18,20 +18,20 @@ Ext.define('RTSBapp.view.ui.MyOverlay', {
 
     config: {
         centered: true,
-        html: '<p>RTSB GmbH - Rail Transportation Service Broker<br>'+
+        html: '<p>RTSB GmbH - Rail Transportation Service Broker<br>' +
                 'Industriestrasse 27<br>' +
-                'D-61381 Friedrichsdorf<br>' +
+                'D-61381 Friedrichsdorf<br><br>' +
 
                 'Tel.: +49 (0) 6172-5908-0<br>' +
-                'Fax: +49 (0) 6172-7776-73<br>' +
+                'Fax: +49 (0) 6172-7776-73<br><br>' +
 
                 'Email: info@rtsb.de<br>' +
-                'Web: www.rtsb.de <br>' +
+                'Web: <a target="_blank" href="http://www.rtsb.de"><font color="2E64FE">www.rtsb.de</font></a><br><br>' +
 
-                'HRB 6070 Bad Homburg vor der Höhe<br>' +
+                'HRB 6070 Bad Homburg vor der Hoehe<br>' +
                 'Steuernummer: 003 242 88102 <br>' +
                 'Umsatzsteuer ID: DE 191151613<br>' +
-                'Geschäftsführer: Artur Ballardt</p>',
+                'Geschaeftsfuehrer: Artur Ballardt</p>',
         styleHtmlContent: true,
         modal: true,
         scrollable: 'vertical',

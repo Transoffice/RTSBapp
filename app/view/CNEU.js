@@ -15,7 +15,11 @@
 
 Ext.define('RTSBapp.view.CNEU', {
     extend: 'Ext.navigation.View',
-    requires: ['Ext.TitleBar', 'Ext.ux.PinchZoomImage'],
+    requires: [
+        'Ext.TitleBar',
+        'Ext.ux.PinchZoomImage',
+        'Ext.Video'
+    ],
     config: {
         navigationBar: {
             hidden: true
@@ -30,6 +34,8 @@ Ext.define('RTSBapp.view.CNEU', {
                         style: 'background-color:#000',
                         items: [
                             {
+                               // id: 'landscapeFormFields',
+                                id: 'portraitFormFields',
                                 xtype: 'pinchzoomimage',
                                 layout: 'card',
                                 centered: true,
@@ -49,21 +55,40 @@ Ext.define('RTSBapp.view.CNEU', {
                     {
                         xtype: 'container',
                         title: 'Details',
+                        scrollable: 'vertical',
+                        style: 'background-color:#000;overflow: hidden;',
+                        html: [
+                                '<div style="background-image:url(resources/loading/Details_bg.png);height:1024px;width:100%;background-repeat:no-repeat;background-size: 100%;">'
 
+                        ].join(""),
                         items: [
                                 {
-                                    xtype: 'pinchzoomimage',
+                                    xtype: 'image',
                                     layout: 'card',
                                     centered: true,
-                                    style: 'background-color:#000;overflow: hidden;',
-                                    height: 383,
+                                    //style: 'background-color:#000;overflow: hidden;',
                                     maxHeight: '100%',
                                     maxWidth: '100%',
                                     minHeight: '100%',
                                     minWidth: '100%',
-                                    src: 'resources/loading/DBGDetails.jpg',
+                                   // src: 'resources/loading/Details_bg.png',
+                                    centered: true,
+                                    html: '<p>RTSB GmbH - Rail Transportation Service Broker<br>' +
+                                            'Industriestrasse 27<br>' +
+                                            'D-61381 Friedrichsdorf<br><br>' +
 
-                                    //src: 'http://127.0.0.1/touch/apps/RTSB/resources/loading/RTSBapp_loading_bg.png'
+                                            'Tel.: +49 (0) 6172-5908-0<br>' +
+                                            'Fax: +49 (0) 6172-7776-73<br><br>' +
+
+                                            'Email: info@rtsb.de<br>' +
+                                            'Web: www.rtsb.de <br><br>' +
+
+                                            'HRB 6070 Bad Homburg vor der Hoehe<br>' +
+                                            'Steuernummer: 003 242 88102 <br>' +
+                                            'Umsatzsteuer ID: DE 191151613<br>' +
+                                            'Geschaeftsfuehrer: Artur Ballardt</p>',
+                                    styleHtmlContent: true,
+                                    //src: 'http://127.0.0.1/touch/apps/RTSB/resources/loading/Details_bg.png'
                                 }
                         ]
                     }
