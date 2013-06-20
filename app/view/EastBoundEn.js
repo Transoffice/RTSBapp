@@ -20,7 +20,7 @@ Ext.define('RTSBapp.view.EastBoundEn', {
         navigationBar: {
             hidden: true
         },
-        title: 'Nested List',
+        title: 'EastBound List',
         items: [
             {
                 items: [
