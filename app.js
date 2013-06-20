@@ -16,7 +16,10 @@ Ext.application({
         'Main',
         'DeutschPanel',
         'EnglishPanel',
-        'RussianPanel'],
+        'RussianPanel',
+        'MyOverlay',
+        'MyPanel1'
+    ],
 
     icon: {
         57: 'resources/icons/Icon.png',

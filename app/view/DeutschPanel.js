@@ -15,10 +15,15 @@
 
 Ext.define('RTSBapp.view.DeutschPanel', {
     extend: 'Ext.navigation.View',
+    initialize: function () {
+        var me = this;
+        me.callParent(arguments);
+    },
     config: {
         navigationBar: {
             hidden: true
         },
+        fullscreen: true,
         title: 'Deutsch Panel',
         items: [
             {
@@ -38,7 +43,24 @@ Ext.define('RTSBapp.view.DeutschPanel', {
                         text: 'China'
                     }
                 ]
-            }
+            },
+                        {
+                            xtype: 'toolbar',
+                            docked: 'bottom',
+                            layout: {
+                                pack: 'center',
+                                type: 'hbox'
+                            },
+                            items: [
+                                {
+                                    xtype: 'button',
+                                    itemId: 'Impressum',
+                                    icon: 'true',
+                                    iconAlign: 'center',
+                                    iconCls: 'info'
+                                }
+                            ]
+                        }
         ],
         listeners: [
             {
@@ -50,7 +72,12 @@ Ext.define('RTSBapp.view.DeutschPanel', {
                 fn: 'OnChinaTap',
                 event: 'tap',
                 delegate: '#ChinaButton'
-            }
+            },
+            {
+                fn: 'OnImpressumClick',
+                event: 'tap',
+                delegate: '#Impressum'
+            },
         ]
     },
 
@@ -64,6 +91,14 @@ Ext.define('RTSBapp.view.DeutschPanel', {
         this.push(Ext.create("RTSBapp.view.CNEU"), {
             title: "EastBound Panel"
         });
+    },
+    OnImpressumClick: function (button, e, eOpts) {
+        if (!this.popup) {
+            this.popup = Ext.Viewport.add({
+                xtype: 'myoverlay'
+            });
+        }
+        this.popup.show();
     }
 
 });
