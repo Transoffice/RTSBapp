@@ -1,0 +1,404 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "censusdetailpanel"
+        ],
+        "height": 795,
+        "minHeight": null,
+        "designer|userClassName": "CensusDetailPanel",
+        "designer|userAlias": "censusdetailpanel",
+        "layout": "vbox",
+        "scrollable": false
+    },
+    "designerId": "4c8cf420-dc3a-4258-87f3-37d85eb42fce",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "center",
+                "docked": "top",
+                "itemId": "listToolbar",
+                "margin": null,
+                "padding": ".4em 0 0 0"
+            },
+            "designerId": "f749bf9d-bb3a-4d6f-93d2-7c80d4cd4e81",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "itemId": "censusdetailbackbtn",
+                        "maxWidth": 80,
+                        "minWidth": 80,
+                        "ui": "back",
+                        "text": "Back"
+                    },
+                    "designerId": "d2830da1-7973-41af-b094-8ef6d3ce821d"
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "width": 10
+                    },
+                    "designerId": "72aba6f2-7ccc-4990-8152-0a8fe5f21f2a"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": null,
+                        "itemId": "censusdetaillabel",
+                        "maxWidth": "10em",
+                        "style": "color : white",
+                        "width": null
+                    },
+                    "designerId": "23332f4f-6a5c-46eb-95f1-9629c22c9b1d"
+                }
+            ]
+        },
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|animation": false,
+                "height": 741,
+                "padding": ""
+            },
+            "designerId": "a44aafa4-6c3f-4042-8cfa-65bfeb74d38f",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Store",
+                        "scrollable": false
+                    },
+                    "designerId": "c35ae247-40f8-4f43-89c4-cc3dd18e751f",
+                    "cn": [
+                        {
+                            "type": "Ext.Toolbar",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": "top",
+                                "minHeight": "1.5em",
+                                "style": "background: #5e6266; font-size: .8em;"
+                            },
+                            "designerId": "97aa15fc-4065-4e69-af2f-b0df52056cc6",
+                            "cn": [
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": null,
+                                        "docked": "left",
+                                        "html": "Number",
+                                        "style": "text-align: right; padding-right: 1em; padding-top: .1em;",
+                                        "width": "66.666%"
+                                    },
+                                    "designerId": "14b7343a-dd2c-442e-9366-cffc8c41ec28"
+                                },
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": null,
+                                        "docked": "right",
+                                        "hidden": true,
+                                        "html": "Percent",
+                                        "style": "padding-right: 1em; padding-top: .1em;"
+                                    },
+                                    "designerId": "084b8afd-8083-423e-84b1-6626aa5ab05e"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "censusfieldset1"
+                                ],
+                                "height": "70em",
+                                "itemId": "censusscrollcont",
+                                "maxHeight": "70em",
+                                "minHeight": "70em",
+                                "layout": "hbox",
+                                "scrollable": "vertical"
+                            },
+                            "designerId": "68a05bbc-f21d-44e4-90b1-6a6c230d1d82",
+                            "cn": [
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 2,
+                                        "cls": [
+                                            "censusfieldset1"
+                                        ],
+                                        "height": "70em",
+                                        "maxHeight": "70em",
+                                        "minHeight": "70em",
+                                        "layout": "vbox"
+                                    },
+                                    "designerId": "56be773a-e2c9-430e-8ec8-9145cef2d3ed",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.form.FieldSet",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 1,
+                                                "height": "70em",
+                                                "itemId": "censusfieldset1",
+                                                "maxHeight": "70em",
+                                                "minHeight": "70em",
+                                                "style": null,
+                                                "scrollable": false,
+                                                "title": null
+                                            },
+                                            "designerId": "f57fc8c4-706c-45ea-b04b-bd17cf30a1fe",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.field.Text",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "height": null,
+                                                        "inputCls": "detailtextfields",
+                                                        "label": "Field",
+                                                        "labelWidth": "60%",
+                                                        "readOnly": true
+                                                    },
+                                                    "designerId": "7053bde9-bc34-4601-849c-358e628cc1ec"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "cls": [
+                                            "censusfieldset2"
+                                        ],
+                                        "height": "70em",
+                                        "maxHeight": "70em",
+                                        "minHeight": "70em",
+                                        "layout": "vbox"
+                                    },
+                                    "designerId": "5f78c1fe-004b-4899-9cc9-4fb277c2330e",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.form.FieldSet",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 1,
+                                                "height": "70em",
+                                                "hidden": true,
+                                                "itemId": "censusfieldset2",
+                                                "maxHeight": "70em",
+                                                "minHeight": "70em",
+                                                "hideOnMaskTap": null,
+                                                "scrollable": false,
+                                                "title": null
+                                            },
+                                            "designerId": "f15015c6-2694-4316-ac5c-a280c59d3906",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.field.Text",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "height": null,
+                                                        "hidden": true,
+                                                        "label": null,
+                                                        "readOnly": true
+                                                    },
+                                                    "designerId": "477270db-612c-4ced-b5ba-9dfa099226cb"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Map",
+                        "height": null,
+                        "html": null,
+                        "minHeight": null,
+                        "minWidth": null,
+                        "style": "background-color:#000;overflow: hidden;",
+                        "width": null,
+                        "hideOnMaskTap": null,
+                        "layout": "vbox",
+                        "scrollable": false
+                    },
+                    "designerId": "aca2b0d9-72c3-4c7d-aa43-806fa62851ea",
+                    "cn": [
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "centered": null,
+                                "docked": null,
+                                "height": 1253,
+                                "hidden": null,
+                                "html": "<div style=\"background-image:url(./resources/images/RTSB_Eastbound_EU-BALTIKUM-GUS.png);height:1024px;width:100%;background-repeat:repeat;background-size: cover;\">",
+                                "minHeight": null,
+                                "minWidth": null,
+                                "width": null,
+                                "src": "./resources/images/RTSB_Eastbound_EU-BALTIKUM-GUS.png"
+                            },
+                            "designerId": "065338ef-dd4e-4a54-93c7-28213ab842b3"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Details",
+                        "height": null,
+                        "html": null,
+                        "minHeight": null,
+                        "minWidth": null,
+                        "style": "background-color:#000;overflow: hidden;",
+                        "width": null,
+                        "hideOnMaskTap": null,
+                        "layout": "vbox",
+                        "scrollable": false
+                    },
+                    "designerId": "51777071-fe3d-406c-863e-f7f8f2406f44",
+                    "cn": [
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "centered": null,
+                                "docked": null,
+                                "height": 1253,
+                                "hidden": null,
+                                "html": "<div style=\"background-image:url(./resources/images/Details_bg.png);height:1024px;width:100%;background-repeat:repeat;background-size: cover;\">  <p><strong><font size=\"4\">Baltikum / Tallinn / Riga / Vilnius:</font></strong><br><br> <font size=\"3\">- Ueberseetransporte in die baltischen Haefen und Umladung <br> - Kommissionierung<br> - Lagerung<br> - Verzollung<br> - Deklarations<br> - Zollangelegenheiten<br><br> - Blockzuege fuer Projektlogistik<br> - Bereitstellung von EVRU, LVRU Container</font><br> </p> ",
+                                "minHeight": null,
+                                "minWidth": null,
+                                "width": null,
+                                "src": ""
+                            },
+                            "designerId": "6cebd9b8-befd-4cba-80e0-d1cd8df4ad91"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.tab.Bar",
+                    "reference": {
+                        "name": "tabBar",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|pack": "center",
+                        "docked": "top",
+                        "hidden": false,
+                        "margin": "",
+                        "scrollable": false
+                    },
+                    "designerId": "2ebf5dd6-a117-4db9-a30c-e842c4750e59"
+                }
+            ]
+        }
+    ]
+}

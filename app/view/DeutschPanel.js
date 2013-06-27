@@ -85,7 +85,7 @@ Ext.define('RTSBapp.view.DeutschPanel', {
     },
 
     onEastBoundTap: function (button, e, eOpts) {
-        this.push(Ext.create("RTSBapp.view.EastBoundDe"), {
+        this.push(Ext.create("RTSBapp.view.DeNested"), {
             title: "EastBound Panel"
         });
     },
