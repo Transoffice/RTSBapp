@@ -1,0 +1,71 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "itemId": "GridTest",
+        "designer|userClassName": "MyContainer110",
+        "designer|userAlias": "mycontainer110"
+    },
+    "designerId": "d5e92c2d-cc5c-4e78-95cc-646aa7a0b284",
+    "cn": [
+        {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "listeners": [
+                    "{\r",
+                    "  tap: {\r",
+                    "      fn: function() {\r",
+                    "          this.fireEvent('gridhelp', this.up('container'));\r",
+                    "      },\r",
+                    "      element: 'element'\r",
+                    "  }\r",
+                    "}"
+                ],
+                "docked": "top",
+                "itemId": "maintitlebar",
+                "minHeight": "2.2em",
+                "designer|createAlias": null
+            },
+            "configAlternates": {
+                "listeners": "object"
+            },
+            "designerId": "5f86db19-69c4-468f-add1-191a82fce732",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "listeners",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "left",
+                        "height": "1.5em",
+                        "itemId": "gridhelp",
+                        "margin": ".4em 0 0 .2em",
+                        "padding": null,
+                        "width": "1.5em",
+                        "src": "./resources/images/question.png"
+                    },
+                    "designerId": "9b1ef813-6868-486d-9d90-1fc020579cba"
+                }
+            ]
+        }
+    ]
+}

@@ -13,16 +13,16 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('RTSBapp.store.ProjectsStore', {
+Ext.define('TouchTreeGrid.store.ProjectsStore', {
     extend: 'Ext.data.TreeStore',
     alias: 'store.projectsStore',
 
     requires: [
-        'RTSBapp.model.Projects'
+        'TouchTreeGrid.model.Projects'
     ],
 
     config: {
-        model: 'RTSBapp.model.Projects',
+        model: 'TouchTreeGrid.model.Projects',
         storeId: 'projectsStore',
         root: {
             children: [

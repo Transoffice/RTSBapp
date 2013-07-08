@@ -13,7 +13,7 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('RTSBapp.view.GridHelpPanel', {
+Ext.define('TouchTreeGrid.view.GridHelpPanel', {
     extend: 'Ext.Panel',
     alias: 'widget.gridHelpPanel',
 

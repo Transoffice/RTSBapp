@@ -13,7 +13,7 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('RTSBapp.store.DynamicStore', {
+Ext.define('TouchTreeGrid.store.DynamicStore', {
     extend: 'Ext.data.Store',
     alias: 'store.dynamicstore',
 

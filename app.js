@@ -15,10 +15,17 @@
 
 //@require @packageOverrides
 Ext.Loader.setConfig({
-
+    paths: {
+        'Ext.ux': 'libs/ux'
+    }
 });
 
 Ext.application({
+
+    requires: [
+        'Ext.MessageBox',
+        'Ext.ux.PinchZoomImage'
+    ],
     stores: [
         'OverrideStore',
         'CensusFilterStore'
@@ -27,7 +34,12 @@ Ext.application({
         'Main',
         'TouchTreeGrid',
         'griddetailpanel',
-        'GridHelpPanel'
+        'GridHelpPanel',
+        'RTSBapp',
+        'HomeImage',
+        'GUIMAP',
+        'SettingsPanel',
+        'MyContainer110'
     ],
     controllers: [
         'CommonController',
@@ -36,11 +48,20 @@ Ext.application({
         'CensusController',
         'ProjectController'
     ],
-    name: 'RTSBapp',
+    name: 'TouchTreeGrid',
 
     launch: function() {
 
-        Ext.create('RTSBapp.view.Main', {fullscreen: true});
+        Ext.Viewport.add(Ext.create('TouchTreeGrid.view.RTSBapp'));
+
+        // redraw image when orientation is changed. 
+        Ext.getDom('ext-viewport').addEventListener('orientationchange', function() {
+
+            var pinchzooms = Ext.ComponentQuery.query('pinchzoomimage');
+            for (var i=0;i<pinchzooms.length;i++) {
+                pinchzooms[i].redraw();
+            }
+        });
     }
 
 });

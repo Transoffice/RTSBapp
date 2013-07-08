@@ -13,7 +13,7 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('RTSBapp.controller.TasksController', {
+Ext.define('TouchTreeGrid.controller.TasksController', {
     extend: 'Ext.app.Controller',
 
     config: {

@@ -9,66 +9,10 @@
         "itemId": "main",
         "designer|userClassName": "Main",
         "designer|userAlias": "main",
-        "designer|initialView": true,
         "layout": "vbox"
     },
     "designerId": "8c274233-2c62-4f46-b103-76d6c9f0def6",
     "cn": [
-        {
-            "type": "Ext.TitleBar",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "listeners": [
-                    "{\r",
-                    "  tap: {\r",
-                    "      fn: function() {\r",
-                    "          this.fireEvent('gridhelp', this.up('container'));\r",
-                    "      },\r",
-                    "      element: 'element'\r",
-                    "  }\r",
-                    "}"
-                ],
-                "docked": "top",
-                "itemId": "maintitlebar",
-                "minHeight": "2.2em",
-                "title": "RTSBapp"
-            },
-            "configAlternates": {
-                "listeners": "object"
-            },
-            "designerId": "7594443e-ac98-4a9c-ad66-560a2c6c6375",
-            "customConfigs": [
-                {
-                    "group": "(Custom Properties)",
-                    "name": "listeners",
-                    "type": "string"
-                }
-            ],
-            "cn": [
-                {
-                    "type": "Ext.Img",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "docked": "left",
-                        "height": "1.5em",
-                        "itemId": "gridhelp",
-                        "margin": ".4em 0 0 .2em",
-                        "padding": null,
-                        "width": "1.5em",
-                        "src": "./resources/images/question.png"
-                    },
-                    "designerId": "9b1ef813-6868-486d-9d90-1fc020579cba"
-                }
-            ]
-        },
         {
             "type": "Ext.tab.Panel",
             "reference": {
@@ -78,7 +22,6 @@
             "codeClass": null,
             "userConfig": {
                 "layout|flex": 1,
-                "height": 754,
                 "itemId": "maintabpanel"
             },
             "designerId": "1048532a-3c3e-476d-8272-d0ef0517f853",
@@ -96,19 +39,7 @@
                         "itemId": "taskslisttab",
                         "layout": "fit"
                     },
-                    "designerId": "d99145e0-1ca1-4ed2-a7f2-04adddcd4d7a",
-                    "cn": [
-                        {
-                            "type": "linkedinstance",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "designerId": "a22a8592-2960-483e-aa51-567d084f6bc3",
-                            "masterInstanceId": "2c9a64bf-c048-4811-b743-90c70542d8f6"
-                        }
-                    ]
+                    "designerId": "d99145e0-1ca1-4ed2-a7f2-04adddcd4d7a"
                 },
                 {
                     "type": "Ext.Container",
@@ -120,26 +51,10 @@
                     "userConfig": {
                         "title": "Project",
                         "iconCls": "organize",
-                        "hidden": true,
                         "itemId": "projecttab",
                         "layout": "fit"
                     },
-                    "designerId": "fc49e1c9-a505-4573-b747-605dcf0a4026",
-                    "cn": [
-                        {
-                            "type": "linkedinstance",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|createAlias": null
-                            },
-                            "designerId": "34dafff5-bf03-4965-8d98-47c3fb59cc57",
-                            "masterInstanceId": "34e87089-9f09-4c61-9b97-8fcb52f62e0d"
-                        }
-                    ]
+                    "designerId": "fc49e1c9-a505-4573-b747-605dcf0a4026"
                 },
                 {
                     "type": "Ext.Container",
@@ -154,19 +69,7 @@
                         "itemId": "censustab",
                         "layout": "fit"
                     },
-                    "designerId": "a7d944c5-4cc1-4324-a604-abaaada1dc75",
-                    "cn": [
-                        {
-                            "type": "linkedinstance",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "designerId": "6ba05af9-6a30-478a-b201-3625ffd87db3",
-                            "masterInstanceId": "27f12204-ed18-4d2a-a68d-327fc5755833"
-                        }
-                    ]
+                    "designerId": "a7d944c5-4cc1-4324-a604-abaaada1dc75"
                 },
                 {
                     "type": "Ext.Container",
@@ -178,7 +81,6 @@
                     "userConfig": {
                         "title": "Lists...",
                         "iconCls": "action",
-                        "hidden": true,
                         "itemId": "listscontainer",
                         "layout": "fit"
                     },
@@ -206,7 +108,6 @@
                     "userConfig": {
                         "title": "Override",
                         "iconCls": "compose",
-                        "hidden": true,
                         "layout": "fit"
                     },
                     "designerId": "25a541d7-0cf8-4fee-86b7-7a60775984c1",

@@ -13,17 +13,17 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('RTSBapp.store.Task2Store', {
+Ext.define('TouchTreeGrid.store.Task2Store', {
     extend: 'Ext.data.TreeStore',
     alias: 'store.task2Store',
 
     requires: [
-        'RTSBapp.model.Task'
+        'TouchTreeGrid.model.Task'
     ],
 
     config: {
         autoLoad: true,
-        model: 'RTSBapp.model.Task',
+        model: 'TouchTreeGrid.model.Task',
         storeId: 'task2Store',
         defaultRootProperty: 'items',
         root: {

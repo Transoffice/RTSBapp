@@ -13,16 +13,13 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('RTSBapp.view.Main', {
+Ext.define('TouchTreeGrid.view.Main', {
     extend: 'Ext.Container',
     alias: 'widget.main',
 
     requires: [
-        'RTSBapp.view.TasksContainer',
-        'RTSBapp.view.ProjectContainer',
-        'RTSBapp.view.CensusContainer',
-        'RTSBapp.view.ListsContainer',
-        'RTSBapp.view.TouchTreeGrid'
+        'TouchTreeGrid.view.ListsContainer',
+        'TouchTreeGrid.view.TouchTreeGrid'
     ],
 
     config: {
@@ -32,35 +29,8 @@ Ext.define('RTSBapp.view.Main', {
         },
         items: [
             {
-                xtype: 'titlebar',
-                listeners: {
-                    tap: {
-                        fn: function() {
-                              this.fireEvent('gridhelp', this.up('container'));
-                          },
-                        element: 'element'
-                    }
-                },
-                docked: 'top',
-                itemId: 'maintitlebar',
-                minHeight: '2.2em',
-                title: 'RTSBapp',
-                items: [
-                    {
-                        xtype: 'image',
-                        docked: 'left',
-                        height: '1.5em',
-                        itemId: 'gridhelp',
-                        margin: '.4em 0 0 .2em',
-                        width: '1.5em',
-                        src: './resources/images/question.png'
-                    }
-                ]
-            },
-            {
                 xtype: 'tabpanel',
                 flex: 1,
-                height: 754,
                 itemId: 'maintabpanel',
                 items: [
                     {
@@ -70,27 +40,16 @@ Ext.define('RTSBapp.view.Main', {
                         itemId: 'taskslisttab',
                         layout: {
                             type: 'fit'
-                        },
-                        items: [
-                            {
-                                xtype: 'tasksContainer'
-                            }
-                        ]
+                        }
                     },
                     {
                         xtype: 'container',
                         title: 'Project',
                         iconCls: 'organize',
-                        hidden: true,
                         itemId: 'projecttab',
                         layout: {
                             type: 'fit'
-                        },
-                        items: [
-                            {
-                                xtype: 'projectContainer'
-                            }
-                        ]
+                        }
                     },
                     {
                         xtype: 'container',
@@ -99,18 +58,12 @@ Ext.define('RTSBapp.view.Main', {
                         itemId: 'censustab',
                         layout: {
                             type: 'fit'
-                        },
-                        items: [
-                            {
-                                xtype: 'censusContainer'
-                            }
-                        ]
+                        }
                     },
                     {
                         xtype: 'container',
                         title: 'Lists...',
                         iconCls: 'action',
-                        hidden: true,
                         itemId: 'listscontainer',
                         layout: {
                             type: 'fit'
@@ -125,7 +78,6 @@ Ext.define('RTSBapp.view.Main', {
                         xtype: 'container',
                         title: 'Override',
                         iconCls: 'compose',
-                        hidden: true,
                         layout: {
                             type: 'fit'
                         },

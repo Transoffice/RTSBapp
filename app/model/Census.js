@@ -13,7 +13,7 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('RTSBapp.model.Census', {
+Ext.define('TouchTreeGrid.model.Census', {
     extend: 'Ext.data.Model',
 
     config: {
@@ -41,71 +41,11 @@ Ext.define('RTSBapp.model.Census', {
                 type: 'int'
             },
             {
-                name: 'Under5years',
-                type: 'int'
-            },
-            {
-                name: 'Age5to9',
-                type: 'int'
-            },
-            {
-                name: 'Age10to14',
-                type: 'int'
-            },
-            {
-                name: 'Age15to19',
-                type: 'int'
-            },
-            {
-                name: 'Age20to24',
-                type: 'int'
-            },
-            {
-                name: 'Age25to34',
-                type: 'int'
-            },
-            {
-                name: 'Age35to44',
-                type: 'int'
-            },
-            {
-                name: 'Age45to54',
-                type: 'int'
-            },
-            {
-                name: 'Age55to59',
-                type: 'int'
-            },
-            {
-                name: 'Age60to64',
-                type: 'int'
-            },
-            {
-                name: 'Age65to74',
-                type: 'int'
-            },
-            {
-                name: 'Age75to84',
-                type: 'int'
-            },
-            {
-                name: 'Age85andOver',
-                type: 'int'
-            },
-            {
                 name: 'FtWEIGHT4',
                 type: 'int'
             },
             {
                 name: 'FtWEIGHT5',
-                type: 'int'
-            },
-            {
-                name: 'Age18andOverMale',
-                type: 'int'
-            },
-            {
-                name: 'Age18andOverFemale',
                 type: 'int'
             },
             {
@@ -117,16 +57,12 @@ Ext.define('RTSBapp.model.Census', {
                 type: 'int'
             },
             {
-                name: 'Age65andOver',
-                type: 'int'
+                name: 'MAP',
+                type: 'string'
             },
             {
-                name: 'Age65andOverMale',
-                type: 'int'
-            },
-            {
-                name: 'Age65andOverFemale',
-                type: 'int'
+                name: 'DETAILS',
+                type: 'string'
             }
         ]
     }

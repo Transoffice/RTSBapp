@@ -13,9 +13,13 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('RTSBapp.view.TouchTreeGrid', {
+Ext.define('TouchTreeGrid.view.TouchTreeGrid', {
     extend: 'Ext.Container',
     alias: 'widget.touchtreegrid',
+
+    requires: [
+        'Ext.ux.PinchZoomImage'
+    ],
 
     config: {
         store: '',

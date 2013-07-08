@@ -13,29 +13,30 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('RTSBapp.view.TasksContainer', {
+Ext.define('TouchTreeGrid.view.TasksContainer', {
     extend: 'Ext.Container',
     alias: 'widget.tasksContainer',
 
     requires: [
-        'RTSBapp.view.TouchTreeGrid'
+        'TouchTreeGrid.view.HomeImage',
+        'TouchTreeGrid.view.TouchTreeGrid'
     ],
 
     config: {
-        height: 1023,
-        hidden: false,
-        layout: {
-            type: 'fit'
-        },
+        height: '100%',
         items: [
             {
+                xtype: 'homeimage',
+                height: '100%'
+            },
+            {
                 xtype: 'tabpanel',
-                hidden: false,
+                hidden: true,
                 itemId: 'tasksTabPanel',
                 items: [
                     {
                         xtype: 'container',
-                        title: 'German',
+                        title: 'Accordion',
                         itemId: 'accordioncont',
                         layout: {
                             type: 'fit'
@@ -63,20 +64,13 @@ Ext.define('RTSBapp.view.TasksContainer', {
                                     'x-touchtreegrid-list',
                                     'x-touchtreegrid-list-accordion'
                                 ],
-                                hidden: true,
                                 itemId: 'firstexample'
-                            },
-                            {
-                                xtype: 'formpanel',
-                                html: '<div style="background-image:url(./resources/images/RTSBapp_loading_bg.png);width: 100%; height: 568px;background-repeat:repeat;background-size: 100% auto;"> ',
-                                scrollable: false
                             }
                         ]
                     },
                     {
                         xtype: 'container',
                         title: 'Tasks#2',
-                        hidden: true,
                         itemId: 'task2cont',
                         layout: {
                             type: 'fit'
@@ -113,7 +107,6 @@ Ext.define('RTSBapp.view.TasksContainer', {
                     {
                         xtype: 'container',
                         title: 'Tasks#3',
-                        hidden: true,
                         itemId: 'task3cont',
                         layout: {
                             type: 'fit'

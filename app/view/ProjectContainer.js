@@ -13,12 +13,12 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('RTSBapp.view.ProjectContainer', {
+Ext.define('TouchTreeGrid.view.ProjectContainer', {
     extend: 'Ext.Container',
     alias: 'widget.projectContainer',
 
     requires: [
-        'RTSBapp.view.TouchTreeGrid'
+        'TouchTreeGrid.view.TouchTreeGrid'
     ],
 
     config: {

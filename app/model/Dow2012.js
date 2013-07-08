@@ -13,7 +13,7 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('RTSBapp.model.Dow2012', {
+Ext.define('TouchTreeGrid.model.Dow2012', {
     extend: 'Ext.data.Model',
 
     config: {

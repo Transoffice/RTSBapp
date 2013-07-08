@@ -6,15 +6,25 @@
     },
     "codeClass": null,
     "userConfig": {
-        "height": 1023,
-        "hidden": false,
+        "height": "100%",
         "designer|userClassName": "TasksContainer",
-        "designer|userAlias": "tasksContainer",
-        "layout": "fit",
-        "modal": null
+        "designer|userAlias": "tasksContainer"
     },
     "designerId": "2c9a64bf-c048-4811-b743-90c70542d8f6",
     "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "100%"
+            },
+            "designerId": "0de414d8-3868-479a-8468-06e56d3c37ab",
+            "masterInstanceId": "8f8e84c8-ff03-4dd1-9181-48be151d3bde"
+        },
         {
             "type": "Ext.tab.Panel",
             "reference": {
@@ -23,7 +33,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "hidden": false,
+                "hidden": true,
                 "itemId": "tasksTabPanel"
             },
             "designerId": "88f70a57-57a9-4e83-93b4-f359ca7f766e",
@@ -36,7 +46,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "title": "German",
+                        "title": "Accordion",
                         "itemId": "accordioncont",
                         "layout": "fit"
                     },
@@ -77,7 +87,6 @@
                                     "x-touchtreegrid-list",
                                     "x-touchtreegrid-list-accordion"
                                 ],
-                                "hidden": true,
                                 "itemId": "firstexample",
                                 "designer|createAlias": null
                             },
@@ -132,19 +141,6 @@
                                 }
                             ],
                             "masterInstanceId": "dcf34621-667d-4a8e-bc95-e3fc814895a0"
-                        },
-                        {
-                            "type": "Ext.form.Panel",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "html": "<div style=\"background-image:url(./resources/images/RTSBapp_loading_bg.png);width: 100%; height: 568px;background-repeat:repeat;background-size: 100% auto;\"> ",
-                                "scrollable": false
-                            },
-                            "designerId": "d4c57aa9-60aa-436b-8fa1-1f71a6e8eeab"
                         }
                     ]
                 },
@@ -157,7 +153,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "title": "Tasks#2",
-                        "hidden": true,
                         "itemId": "task2cont",
                         "layout": "fit"
                     },
@@ -266,7 +261,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "title": "Tasks#3",
-                        "hidden": true,
                         "itemId": "task3cont",
                         "layout": "fit"
                     },

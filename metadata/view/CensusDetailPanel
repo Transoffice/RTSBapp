@@ -9,11 +9,12 @@
         "cls": [
             "censusdetailpanel"
         ],
-        "height": 795,
-        "minHeight": null,
         "designer|userClassName": "CensusDetailPanel",
         "designer|userAlias": "censusdetailpanel",
-        "layout": "vbox",
+        "requires": [
+            "Ext.ux.PinchZoomImage"
+        ],
+        "layout": null,
         "scrollable": false
     },
     "designerId": "4c8cf420-dc3a-4258-87f3-37d85eb42fce",
@@ -28,7 +29,7 @@
             "userConfig": {
                 "container|align": "center",
                 "docked": "top",
-                "itemId": "listToolbar",
+                "hidden": false,
                 "margin": null,
                 "padding": ".4em 0 0 0"
             },
@@ -89,11 +90,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "container|animation": false,
-                "height": 741,
-                "padding": ""
+                "docked": "top",
+                "height": "100%",
+                "hidden": false
             },
-            "designerId": "a44aafa4-6c3f-4042-8cfa-65bfeb74d38f",
+            "designerId": "6ee12ced-6f7a-40e5-9027-812f2d061ee1",
             "cn": [
                 {
                     "type": "Ext.Container",
@@ -103,10 +104,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "title": "Store",
-                        "scrollable": false
+                        "title": "Routs"
                     },
-                    "designerId": "c35ae247-40f8-4f43-89c4-cc3dd18e751f",
+                    "designerId": "55b95d4c-c4a4-43ed-bb26-faf416cbefc6",
                     "cn": [
                         {
                             "type": "Ext.Toolbar",
@@ -267,7 +267,6 @@
                                                 "itemId": "censusfieldset2",
                                                 "maxHeight": "70em",
                                                 "minHeight": "70em",
-                                                "hideOnMaskTap": null,
                                                 "scrollable": false,
                                                 "title": null
                                             },
@@ -304,38 +303,79 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "title": "Map",
-                        "height": null,
-                        "html": null,
-                        "minHeight": null,
-                        "minWidth": null,
-                        "style": "background-color:#000;overflow: hidden;",
-                        "width": null,
-                        "hideOnMaskTap": null,
-                        "layout": "vbox",
-                        "scrollable": false
+                        "title": "Map"
                     },
-                    "designerId": "aca2b0d9-72c3-4c7d-aa43-806fa62851ea",
+                    "designerId": "5dca60f9-8c9b-47ee-a2c8-791ea1ba58b0",
                     "cn": [
                         {
-                            "type": "Ext.Img",
+                            "type": "Ext.Container",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "centered": null,
-                                "docked": null,
-                                "height": 1253,
+                                "cls": [
+                                    "censusmapSet"
+                                ],
+                                "height": "70em",
                                 "hidden": null,
-                                "html": "<div style=\"background-image:url(./resources/images/RTSB_Eastbound_EU-BALTIKUM-GUS.png);height:1024px;width:100%;background-repeat:repeat;background-size: cover;\">",
-                                "minHeight": null,
-                                "minWidth": null,
-                                "width": null,
-                                "src": "./resources/images/RTSB_Eastbound_EU-BALTIKUM-GUS.png"
+                                "itemId": null,
+                                "maxHeight": "70em",
+                                "minHeight": "70em",
+                                "layout": "vbox"
                             },
-                            "designerId": "065338ef-dd4e-4a54-93c7-28213ab842b3"
+                            "designerId": "b074b179-475a-4bdd-892b-5d3de3992d95",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.FieldSet",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": "70em",
+                                        "hidden": false,
+                                        "itemId": "censusmapSet",
+                                        "maxHeight": "70em",
+                                        "minHeight": "70em",
+                                        "scrollable": false,
+                                        "title": null
+                                    },
+                                    "designerId": "2e839db6-cba5-456e-90d1-34fb9b256312",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "itemId": "censusMapImage"
+                                            },
+                                            "designerId": "b054e0ba-e65d-448a-9bfe-f7047a2669e9"
+                                        },
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "hidden": true,
+                                                "inputCls": "detailtextfields",
+                                                "label": "Field",
+                                                "labelWidth": "60%",
+                                                "readOnly": true
+                                            },
+                                            "designerId": "527fa667-ebb9-44a2-bf64-adcb0a5164ca"
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 },
@@ -347,38 +387,120 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "title": "Details",
-                        "height": null,
-                        "html": null,
-                        "minHeight": null,
-                        "minWidth": null,
-                        "style": "background-color:#000;overflow: hidden;",
-                        "width": null,
-                        "hideOnMaskTap": null,
-                        "layout": "vbox",
-                        "scrollable": false
+                        "title": "Details"
                     },
-                    "designerId": "51777071-fe3d-406c-863e-f7f8f2406f44",
+                    "designerId": "f2954a4f-164f-467a-bbd5-1fb2e50be813",
                     "cn": [
                         {
-                            "type": "Ext.Img",
+                            "type": "Ext.Container",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "centered": null,
-                                "docked": null,
-                                "height": 1253,
-                                "hidden": null,
-                                "html": "<div style=\"background-image:url(./resources/images/Details_bg.png);height:1024px;width:100%;background-repeat:repeat;background-size: cover;\">  <p><strong><font size=\"4\">Baltikum / Tallinn / Riga / Vilnius:</font></strong><br><br> <font size=\"3\">- Ueberseetransporte in die baltischen Haefen und Umladung <br> - Kommissionierung<br> - Lagerung<br> - Verzollung<br> - Deklarations<br> - Zollangelegenheiten<br><br> - Blockzuege fuer Projektlogistik<br> - Bereitstellung von EVRU, LVRU Container</font><br> </p> ",
-                                "minHeight": null,
-                                "minWidth": null,
-                                "width": null,
-                                "src": ""
+                                "cls": [
+                                    "censusDetailSet"
+                                ],
+                                "docked": "top",
+                                "height": "70em",
+                                "hidden": true,
+                                "maxHeight": "70em",
+                                "minHeight": "70em",
+                                "layout": "fit"
                             },
-                            "designerId": "6cebd9b8-befd-4cba-80e0-d1cd8df4ad91"
+                            "designerId": "435a2cfc-4265-4081-95c2-5c6ad9ebf1dd",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.FieldSet",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": "70em",
+                                        "hidden": false,
+                                        "itemId": "censusDetailSet",
+                                        "maxHeight": "70em",
+                                        "minHeight": "70em",
+                                        "layout": "fit",
+                                        "scrollable": false,
+                                        "title": null
+                                    },
+                                    "designerId": "4fbcf6c7-1ac2-40ba-8bbd-a8595b795a7a",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "hidden": true,
+                                                "label": "Field"
+                                            },
+                                            "designerId": "bb009ab5-a801-48eb-9b24-a29c86ab360c"
+                                        },
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "height": "100%",
+                                                "hidden": true,
+                                                "itemId": "censusDetailImage",
+                                                "designer|createAlias": "pinchzoomimage"
+                                            },
+                                            "designerId": "99ad141d-2414-4571-b030-262e73924bd5"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "src": "./resources/images/RTSB_Eastbound_EU-BALTIKUM-GUS.png",
+                                "height": "100%",
+                                "html": null,
+                                "designer|createAlias": "pinchzoomimage",
+                                "layout": null
+                            },
+                            "designerId": "fd26979f-8223-4289-9fee-9888833d0663",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "src",
+                                    "type": "string"
+                                }
+                            ],
+                            "cn": [
+                                {
+                                    "type": "Ext.Img",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": 201,
+                                        "hidden": false,
+                                        "designer|createAlias": "pinchzoomimage",
+                                        "src": "./resources/images/RTSB_Eastbound_EU-BALTIKUM-GUS.png"
+                                    },
+                                    "designerId": "616dcc0a-5e7e-4200-851c-a060ad297208"
+                                }
+                            ]
                         }
                     ]
                 },
@@ -391,12 +513,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "container|pack": "center",
-                        "docked": "top",
-                        "hidden": false,
-                        "margin": "",
-                        "scrollable": false
+                        "docked": "top"
                     },
-                    "designerId": "2ebf5dd6-a117-4db9-a30c-e842c4750e59"
+                    "designerId": "227f6602-6c1f-4c08-b468-b0f163ea95ae"
                 }
             ]
         }

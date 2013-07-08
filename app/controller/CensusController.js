@@ -13,7 +13,7 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('RTSBapp.controller.CensusController', {
+Ext.define('TouchTreeGrid.controller.CensusController', {
     extend: 'Ext.app.Controller',
 
     config: {
@@ -129,16 +129,53 @@ Ext.define('RTSBapp.controller.CensusController', {
                 var fldSet = newcont.down('#censusfieldset1');
                 var result = fldSet.setConfig({
                     items : [
-                    {label: '20ft up to 8 t',labelWidth: '60%', inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.FtWEIGHT, 0)}, 
-                    {label: '20ft up to 16,5 t',labelWidth: '60%', inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.FtWEIGHT2, 0)}, 
-                    {label: '20ft up to 22 t',labelWidth: '60%', inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.FtWEIGHT3, 0)}, 
-                    {label: '20ft up to 24 t',labelWidth: '60%', inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.FtWEIGHT4, 0)}, 
-                    {label: '40ft up to 8 t',labelWidth: '60%', inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.FtWEIGHT5, 0)}, 
-                    {label: '40ft up to 16,5',labelWidth: '60%', inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.FtWEIGHT6, 0)}, 
-                    {label: '40ft up to 30 t',labelWidth: '60%', inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.FtWEIGHT7, 0)}
+                    {label: 'FtWEIGHT',labelWidth: '60%', inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.FtWEIGHT, 0)}, 
+                    {label: 'FtWEIGHT2',labelWidth: '60%', inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.FtWEIGHT2, 0)}, 
+                    {label: 'FtWEIGHT3',labelWidth: '60%', inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.FtWEIGHT3, 0)}, 
+                    {label: 'FtWEIGHT4',labelWidth: '60%', inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.FtWEIGHT4, 0)}, 
+                    {label: 'FtWEIGHT5',labelWidth: '60%', inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.FtWEIGHT5, 0)}, 
+                    {label: 'FtWEIGHT6',labelWidth: '60%', inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.FtWEIGHT6, 0)}, 
+                    {label: 'FtWEIGHT7',labelWidth: '60%', inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.FtWEIGHT7, 0)}
                 ]}); 
 
+                var fldSet3 = newcont.down('#censusMapImage');
+                var maplink = record.get('MAP'); 
+                fldSet3.setHtml('<div style="background-image:url('+maplink+');height:1024px;width:100%;background-repeat:no-repeat;background-size: 100%;">'); 
 
+                var fldSet4 = newcont.down('#censusDetailImage');
+                var detaillink = record.get('DETAILS'); 
+                //fldSet4.setHtml('<div style="background-image:url('+detaillink+');height:1024px;width:100%;background-repeat:no-repeat;background-size: 100%;">'); 
+                //fldSet4.setSrc('<div style="background-image:url('+detaillink+');height:1024px;width:100%;background-repeat:no-repeat;background-size: 100%;">');
+                fldSet4.setSrc(record.get('DETAILS'));   
+                var fldSet2 = newcont.down('#censusfieldset2');
+                var resul2t = fldSet2.setConfig({
+                    items : [
+                    {inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.TotalPopulation/record.data.TotalPopulation*100, 1, "", "%")},
+                    {inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.Male/record.data.TotalPopulation*100, 1, "", "%")},
+                    {inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.Female/record.data.TotalPopulation*100, 1, "", "%")},
+                    {inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.Under5years/record.data.TotalPopulation*100, 1, "", "%")},
+                    {inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.Age5to9/record.data.TotalPopulation*100, 1, "", "%")},
+                    {inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.Age10to14/record.data.TotalPopulation*100, 1, "", "%")},
+                    {inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.Age15to19/record.data.TotalPopulation*100, 1, "", "%")},
+                    {inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.Age20to24/record.data.TotalPopulation*100, 1, "", "%")},
+                    {inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.Age25to34/record.data.TotalPopulation*100, 1, "", "%")},
+                    {inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.Age35to44/record.data.TotalPopulation*100, 1, "", "%")},
+                    {inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.Age45to54/record.data.TotalPopulation*100, 1, "", "%")},
+                    {inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.Age55to59/record.data.TotalPopulation*100, 1, "", "%")},
+                    {inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.Age60to64/record.data.TotalPopulation*100, 1, "", "%")},
+                    {inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.Age65to74/record.data.TotalPopulation*100, 1, "", "%")},
+                    {inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.Age75to84/record.data.TotalPopulation*100, 1, "", "%")},
+                    {inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.Age85andOver/record.data.TotalPopulation*100, 1, "", "%")},
+                    {inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.MedianAge/record.data.TotalPopulation*100, 1, "", "%")},
+                    {inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.Age18andOver/record.data.TotalPopulation*100, 1, "", "%")},
+                    {inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.Age18andOverMale/record.data.TotalPopulation*100, 1, "", "%")},
+                    {inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.Age18andOverFemale/record.data.TotalPopulation*100, 1, "", "%")},
+                    {inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.Age21andOver/record.data.TotalPopulation*100, 1, "", "%")},
+                    {inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.Age62andOver/record.data.TotalPopulation*100, 1, "", "%")},
+                    {inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.Age65andOver/record.data.TotalPopulation*100, 1, "", "%")},
+                    {inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.Age65andOverMale/record.data.TotalPopulation*100, 1, "", "%")},
+                    {inputCls: inputCls, xtype: 'textfield', readOnly: true, value: myList.formatNumbers(record.data.Age65andOverFemale/record.data.TotalPopulation*100, 1, "", "%")}
+                ]}); 
                 swapcont.add(newcont);
                 swapcont.setActiveItem(newcont);      
             }
@@ -186,7 +223,7 @@ Ext.define('RTSBapp.controller.CensusController', {
         var me = this;
 
         var gridcont = me.getCensusmaine();
-        var gridurl = 'data/censusmaine2000TREE.json';
+        var gridurl = 'data/TransportTable.json';
 
         commonController.loadStore(me, gridcont, gridurl, 'Loading Census...');
 
@@ -204,95 +241,8 @@ Ext.define('RTSBapp.controller.CensusController', {
         var colArr = [];
 
         if (device==='phone' && orient==='portrait') {
-            colArr = [
-            {
-                header: '&nbsp;',
-                dataIndex: 'CATEG',
-                width: '32%',
-                style: 'text-align: left;',
-                categStyle: 'font-weight: bold; text-align: left; color: blue;',
-                headerStyle: 'text-align: left; color: #ccc;'
-            },
-            {
-                header: 'FtWEIGHT',
-                dataIndex: 'FtWEIGHT',
-                width: '20%',
-                style: 'text-align: right;',
-                categStyle: 'text-align: right;',
-                headerStyle: 'text-align: right; color: #ccc;',
-                renderer: 'this.formatNumbers(values.FtWEIGHT, 0)'
-            },
-            {
-                header: 'FtWEIGHT2',
-                dataIndex: 'FtWEIGHT2',
-                width: '15%',
-                style: 'text-align: right;',
-                categStyle: 'text-align: right;',
-                headerStyle: 'text-align: right; color: #ccc;',
-                renderer: 'this.formatNumbers(values.FtWEIGHT2, 0)'
-            },
-            {
-                header: 'FtWEIGHT3',
-                dataIndex: 'FtWEIGHT3',
-                width: '15%',
-                style: 'text-align: right;',
-                categStyle: 'text-align: right;',
-                headerStyle: 'text-align: right; color: #ccc;',
-                renderer: 'this.formatNumbers(values.FtWEIGHT3, 0)'
-            }
-            ];    
-        }
-
-        if (device==='phone' && orient==='landscape') {
-            colArr = [
-            {
-                header: '&nbsp;',
-                dataIndex: 'CATEG',
-                width: '32%',
-                style: 'text-align: left;',
-                categStyle: 'font-weight: bold; text-align: left; color: blue;',
-                headerStyle: 'text-align: left; color: #ccc;'
-            },
-            {
-                header: 'FtWEIGHT',
-                dataIndex: 'FtWEIGHT',
-                width: '15%',
-                style: 'text-align: right;',
-                categStyle: 'text-align: right;',
-                headerStyle: 'text-align: right; color: #ccc;',
-                renderer: 'this.formatNumbers(values.FtWEIGHT, 0)'
-            },
-            {
-                header: 'FtWEIGHT2',
-                dataIndex: 'FtWEIGHT2',
-                width: '15%',
-                style: 'text-align: right;',
-                categStyle: 'text-align: right;',
-                headerStyle: 'text-align: right; color: #ccc;',
-                renderer: 'this.formatNumbers(values.FtWEIGHT2, 0)'
-            },
-            {
-                header: 'FtWEIGHT3',
-                dataIndex: 'FtWEIGHT3',
-                width: '15%',
-                style: 'text-align: right;',
-                categStyle: 'text-align: right;',
-                headerStyle: 'text-align: right; color: #ccc;',
-                renderer: 'this.formatNumbers(values.FtWEIGHT3, 0)'
-            },
-            {
-                header: 'FtWEIGHT4',
-                dataIndex: 'FtWEIGHT4',
-                width: '15%',
-                style: 'text-align: center;',
-                categStyle: 'text-align: center;',
-                headerStyle: 'text-align: center; color: #ccc;',
-                renderer: 'this.formatNumbers(values.FtWEIGHT4, 0)'
-            }
-            ];  
-        }
-
-        if (device==='tablet' && orient==='portrait') {
+            Ext.getCmp('langege').show();
+            Ext.getCmp('RTSBhm').show();
             colArr = [
             {
                 header: '&nbsp;',
@@ -301,66 +251,44 @@ Ext.define('RTSBapp.controller.CensusController', {
                 style: 'text-align: left;',
                 categStyle: 'font-weight: bold; text-align: left; color: blue;',
                 headerStyle: 'text-align: left; color: #ccc;'
-            },
+            }
+            ];    
+        }
+
+        if (device==='phone' && orient==='landscape') {
+            Ext.getCmp('langege').hide();
+            Ext.getCmp('RTSBhm').hide();
+            colArr = [
             {
-                header: 'FtWEIGHT',
-                dataIndex: 'FtWEIGHT',
-                width: '11%',
-                style: 'text-align: right;',
-                categStyle: 'text-align: right;',
-                headerStyle: 'text-align: right; color: #ccc;',
-                renderer: 'this.formatNumbers(values.FtWEIGHT, 0)'
-            },
+                header: '&nbsp;',
+                dataIndex: 'CATEG',
+                width: '21%',
+                style: 'text-align: left;',
+                categStyle: 'font-weight: bold; text-align: left; color: blue;',
+                headerStyle: 'text-align: left; color: #ccc;'
+            }
+            ];  
+        }
+
+        if (device==='tablet' && orient==='portrait') {
+            Ext.getCmp('langege').show();
+            Ext.getCmp('RTSBhm').show();
+            colArr = [
             {
-                header: 'FtWEIGHT2',
-                dataIndex: 'FtWEIGHT2',
-                width: '11%',
-                style: 'text-align: right;',
-                categStyle: 'text-align: right;',
-                headerStyle: 'text-align: right; color: #ccc;',
-                renderer: 'this.formatNumbers(values.FtWEIGHT2, 0)'
-            },
-            {
-                header: 'FtWEIGHT3',
-                dataIndex: 'FtWEIGHT3',
-                width: '11%',
-                style: 'text-align: right;',
-                categStyle: 'text-align: right;',
-                headerStyle: 'text-align: right; color: #ccc;',
-                renderer: 'this.formatNumbers(values.FtWEIGHT3, 0)'
-            },
-            {
-                header: 'FtWEIGHT4',
-                dataIndex: 'FtWEIGHT4',
-                width: '11%',
-                style: 'text-align: center;',
-                categStyle: 'text-align: center;',
-                headerStyle: 'text-align: center; color: #ccc;',
-                renderer: 'this.formatNumbers(values.FtWEIGHT4, 0)'
-            },
-            {
-                header: 'FtWEIGHT5',
-                dataIndex: 'FtWEIGHT5',
-                width: '11%',
-                style: 'text-align: right;',
-                categStyle: 'text-align: right;',
-                headerStyle: 'text-align: right; color: #ccc;',
-                renderer: 'this.formatNumbers(values.FtWEIGHT5, 0)'
-            },
-            {
-                header: 'FtWEIGHT6',
-                dataIndex: 'FtWEIGHT6',
-                width: '11%',
-                style: 'text-align: right;',
-                categStyle: 'text-align: right;',
-                headerStyle: 'text-align: right; color: #ccc;',
-                renderer: 'this.formatNumbers(values.FtWEIGHT6, 0)'
+                header: '&nbsp;',
+                dataIndex: 'CATEG',
+                width: '21%',
+                style: 'text-align: left;',
+                categStyle: 'font-weight: bold; text-align: left; color: blue;',
+                headerStyle: 'text-align: left; color: #ccc;'
             }
             ];    
 
         }
 
         if (device==='tablet' && orient==='landscape') {
+            Ext.getCmp('langege').hide();
+            Ext.getCmp('RTSBhm').hide();
             colArr = [
             {
                 header: '&nbsp;',
@@ -369,8 +297,7 @@ Ext.define('RTSBapp.controller.CensusController', {
                 style: 'text-align: left;',
                 categStyle: 'font-weight: bold; text-align: left; color: blue;',
                 headerStyle: 'text-align: left; color: #ccc;'
-            },
-
+            }
             ];    
 
         }

@@ -13,16 +13,16 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('RTSBapp.store.dow2012TreeStore', {
+Ext.define('TouchTreeGrid.store.dow2012TreeStore', {
     extend: 'Ext.data.TreeStore',
     alias: 'store.dow2012treestore',
 
     requires: [
-        'RTSBapp.model.Dow2012Tree'
+        'TouchTreeGrid.model.Dow2012Tree'
     ],
 
     config: {
-        model: 'RTSBapp.model.Dow2012Tree',
+        model: 'TouchTreeGrid.model.Dow2012Tree',
         storeId: 'dow2012treestore',
         root: {
             children: [

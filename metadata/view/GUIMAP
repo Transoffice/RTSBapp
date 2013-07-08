@@ -1,0 +1,16 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "GUIMAP",
+        "designer|userAlias": "guimap",
+        "requires": [
+            "Ext.ux.PinchZoomImage"
+        ]
+    },
+    "designerId": "32c2c5fc-1d1d-49aa-868b-5bc26bb10079"
+}

@@ -13,22 +13,22 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('RTSBapp.view.CensusDetailPanel', {
+Ext.define('TouchTreeGrid.view.CensusDetailPanel', {
     extend: 'Ext.Container',
     alias: 'widget.censusdetailpanel',
 
+    requires: [
+        'Ext.ux.PinchZoomImage'
+    ],
+
     config: {
         cls: 'censusdetailpanel',
-        height: 795,
-        layout: {
-            type: 'vbox'
-        },
         scrollable: false,
         items: [
             {
                 xtype: 'toolbar',
                 docked: 'top',
-                itemId: 'listToolbar',
+                hidden: false,
                 padding: '.4em 0 0 0',
                 layout: {
                     align: 'center',
@@ -57,17 +57,13 @@ Ext.define('RTSBapp.view.CensusDetailPanel', {
             },
             {
                 xtype: 'tabpanel',
-                height: 741,
-                padding: '',
-                layout: {
-                    animation: false,
-                    type: 'card'
-                },
+                docked: 'top',
+                height: '100%',
+                hidden: false,
                 items: [
                     {
                         xtype: 'container',
-                        title: 'Store',
-                        scrollable: false,
+                        title: 'Routs',
                         items: [
                             {
                                 xtype: 'toolbar',
@@ -171,43 +167,105 @@ Ext.define('RTSBapp.view.CensusDetailPanel', {
                     {
                         xtype: 'container',
                         title: 'Map',
-                        style: 'background-color:#000;overflow: hidden;',
-                        layout: {
-                            type: 'vbox'
-                        },
-                        scrollable: false,
                         items: [
                             {
-                                xtype: 'image',
-                                height: 1253,
-                                html: '<div style="background-image:url(./resources/images/RTSB_Eastbound_EU-BALTIKUM-GUS.png);height:1024px;width:100%;background-repeat:repeat;background-size: cover;">',
-                                src: './resources/images/RTSB_Eastbound_EU-BALTIKUM-GUS.png'
+                                xtype: 'container',
+                                cls: 'censusmapSet',
+                                height: '70em',
+                                maxHeight: '70em',
+                                minHeight: '70em',
+                                layout: {
+                                    type: 'vbox'
+                                },
+                                items: [
+                                    {
+                                        xtype: 'fieldset',
+                                        height: '70em',
+                                        hidden: false,
+                                        itemId: 'censusmapSet',
+                                        maxHeight: '70em',
+                                        minHeight: '70em',
+                                        scrollable: false,
+                                        items: [
+                                            {
+                                                xtype: 'label',
+                                                itemId: 'censusMapImage'
+                                            },
+                                            {
+                                                xtype: 'textfield',
+                                                hidden: true,
+                                                inputCls: 'detailtextfields',
+                                                label: 'Field',
+                                                labelWidth: '60%',
+                                                readOnly: true
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
                         ]
                     },
                     {
                         xtype: 'container',
                         title: 'Details',
-                        style: 'background-color:#000;overflow: hidden;',
-                        layout: {
-                            type: 'vbox'
-                        },
-                        scrollable: false,
                         items: [
                             {
-                                xtype: 'image',
-                                height: 1253,
-                                html: '<div style="background-image:url(./resources/images/Details_bg.png);height:1024px;width:100%;background-repeat:repeat;background-size: cover;">  <p><strong><font size="4">Baltikum / Tallinn / Riga / Vilnius:</font></strong><br><br> <font size="3">- Ueberseetransporte in die baltischen Haefen und Umladung <br> - Kommissionierung<br> - Lagerung<br> - Verzollung<br> - Deklarations<br> - Zollangelegenheiten<br><br> - Blockzuege fuer Projektlogistik<br> - Bereitstellung von EVRU, LVRU Container</font><br> </p> ',
-                                src: ''
+                                xtype: 'container',
+                                cls: 'censusDetailSet',
+                                docked: 'top',
+                                height: '70em',
+                                hidden: true,
+                                maxHeight: '70em',
+                                minHeight: '70em',
+                                layout: {
+                                    type: 'fit'
+                                },
+                                items: [
+                                    {
+                                        xtype: 'fieldset',
+                                        height: '70em',
+                                        hidden: false,
+                                        itemId: 'censusDetailSet',
+                                        maxHeight: '70em',
+                                        minHeight: '70em',
+                                        layout: {
+                                            type: 'fit'
+                                        },
+                                        scrollable: false,
+                                        items: [
+                                            {
+                                                xtype: 'textfield',
+                                                hidden: true,
+                                                label: 'Field'
+                                            },
+                                            {
+                                                xtype: 'pinchzoomimage',
+                                                height: '100%',
+                                                hidden: true,
+                                                itemId: 'censusDetailImage'
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                xtype: 'pinchzoomimage',
+                                src: './resources/images/RTSB_Eastbound_EU-BALTIKUM-GUS.png',
+                                height: '100%',
+                                items: [
+                                    {
+                                        xtype: 'pinchzoomimage',
+                                        height: 201,
+                                        hidden: false,
+                                        src: './resources/images/RTSB_Eastbound_EU-BALTIKUM-GUS.png'
+                                    }
+                                ]
                             }
                         ]
                     }
                 ],
                 tabBar: {
                     docked: 'top',
-                    hidden: false,
-                    margin: '',
-                    scrollable: false,
                     layout: {
                         pack: 'center',
                         type: 'hbox'

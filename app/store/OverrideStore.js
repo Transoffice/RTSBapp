@@ -13,17 +13,17 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('RTSBapp.store.OverrideStore', {
+Ext.define('TouchTreeGrid.store.OverrideStore', {
     extend: 'Ext.data.TreeStore',
     alias: 'store.overrideStore',
 
     requires: [
-        'RTSBapp.model.Task'
+        'TouchTreeGrid.model.Task'
     ],
 
     config: {
         autoLoad: true,
-        model: 'RTSBapp.model.Task',
+        model: 'TouchTreeGrid.model.Task',
         storeId: 'overrideStore',
         defaultRootProperty: 'items',
         root: {

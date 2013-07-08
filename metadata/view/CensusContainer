@@ -8,6 +8,9 @@
     "userConfig": {
         "designer|userClassName": "CensusContainer",
         "designer|userAlias": "censusContainer",
+        "requires": [
+            "Ext.ux.PinchZoomImage"
+        ],
         "layout": "fit"
     },
     "designerId": "27f12204-ed18-4d2a-a68d-327fc5755833",
@@ -117,7 +120,6 @@
                         "cls": [
                             "census-filter-cont"
                         ],
-                        "hidden": true,
                         "itemId": "censusfiltercont",
                         "layout": "card"
                     },
@@ -166,7 +168,6 @@
                                             "x-touchtreegrid-list",
                                             "x-touchtreegrid-list-censusmaine"
                                         ],
-                                        "hidden": false,
                                         "itemId": "censusfilter",
                                         "designer|createAlias": null
                                     },
@@ -324,6 +325,7 @@
                             "projectTabBar"
                         ],
                         "docked": "top",
+                        "hidden": true,
                         "style": "background-image: -webkit-linear-gradient(top, rgb(86, 167, 223), rgb(43, 145, 215) 3%, rgb(33, 117, 175));",
                         "ui": "light"
                     },
@@ -351,7 +353,10 @@
                     "if (device === 'phone') {\r",
                     "    censusmaine.setCls(['x-touchtreegrid-list', 'x-touchtreegrid-list-censusmaine-phone']);\r",
                     "    censusfilter.setCls(['x-touchtreegrid-list', 'x-touchtreegrid-list-censusmaine-phone']);\r",
-                    "}"
+                    "}\r",
+                    "\r",
+                    "\r",
+                    ""
                 ]
             },
             "designerId": "5fd5bdf0-d157-471a-9d1a-dc5d94fb98e4"

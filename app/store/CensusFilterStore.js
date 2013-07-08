@@ -13,15 +13,15 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('RTSBapp.store.CensusFilterStore', {
+Ext.define('TouchTreeGrid.store.CensusFilterStore', {
     extend: 'Ext.data.TreeStore',
 
     requires: [
-        'RTSBapp.model.Census'
+        'TouchTreeGrid.model.Census'
     ],
 
     config: {
-        model: 'RTSBapp.model.Census',
+        model: 'TouchTreeGrid.model.Census',
         storeId: 'censusFilterStore',
         root: {
             children: [

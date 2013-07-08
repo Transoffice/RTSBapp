@@ -13,16 +13,16 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('RTSBapp.store.TaskAccordion', {
+Ext.define('TouchTreeGrid.store.TaskAccordion', {
     extend: 'Ext.data.TreeStore',
 
     requires: [
-        'RTSBapp.model.Task'
+        'TouchTreeGrid.model.Task'
     ],
 
     config: {
         autoLoad: true,
-        model: 'RTSBapp.model.Task',
+        model: 'TouchTreeGrid.model.Task',
         storeId: 'TaskAccordionStore',
         defaultRootProperty: 'items',
         root: {

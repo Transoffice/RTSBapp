@@ -14,7 +14,16 @@
             "Main",
             "TouchTreeGrid",
             "griddetailpanel",
-            "GridHelpPanel"
+            "GridHelpPanel",
+            "RTSBapp",
+            "HomeImage",
+            "GUIMAP",
+            "SettingsPanel",
+            "MyContainer110"
+        ],
+        "requires": [
+            "Ext.MessageBox",
+            "Ext.ux.PinchZoomImage"
         ],
         "controllers": [
             "CommonController",
@@ -23,7 +32,48 @@
             "CensusController",
             "ProjectController"
         ],
-        "name": "RTSBapp"
+        "name": "TouchTreeGrid"
     },
-    "designerId": "application"
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "Ext.Loader",
+            "reference": {
+                "name": "loader",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "paths": [
+                    "{\"Ext.ux\":\"libs/ux\"}"
+                ]
+            },
+            "designerId": "d6d6a250-1850-4c92-a688-46ab018661a6"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "\r",
+                    "Ext.Viewport.add(Ext.create('TouchTreeGrid.view.RTSBapp'));\r",
+                    "\r",
+                    "// redraw image when orientation is changed. \r",
+                    "Ext.getDom('ext-viewport').addEventListener('orientationchange', function() {\r",
+                    "\r",
+                    "    var pinchzooms = Ext.ComponentQuery.query('pinchzoomimage');\r",
+                    "    for (var i=0;i<pinchzooms.length;i++) {\r",
+                    "        pinchzooms[i].redraw();\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "2790e2ce-b91e-46da-b965-a8e91f215c6d"
+        }
+    ]
 }

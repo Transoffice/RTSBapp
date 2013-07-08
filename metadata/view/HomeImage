@@ -1,0 +1,46 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "HomeImage",
+        "designer|userAlias": "homeimage",
+        "requires": [
+            "Ext.ux.PinchZoomImage"
+        ]
+    },
+    "designerId": "8f8e84c8-ff03-4dd1-9181-48be151d3bde",
+    "cn": [
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "100%",
+                "designer|createAlias": "pinchzoomimage",
+                "src": "./resources/images/RTSBapp_loading_bg.png"
+            },
+            "designerId": "aa5d765b-a6fb-413e-b8f1-ce5ab11dd382"
+        },
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "100%",
+                "designer|createAlias": "pinchzoomimage",
+                "src": "./resources/images/RTSBapp_loading_bg.png"
+            },
+            "designerId": "72e215c1-976c-46af-85d9-d8d042b67603"
+        }
+    ]
+}

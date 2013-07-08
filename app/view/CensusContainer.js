@@ -13,12 +13,13 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('RTSBapp.view.CensusContainer', {
+Ext.define('TouchTreeGrid.view.CensusContainer', {
     extend: 'Ext.Container',
     alias: 'widget.censusContainer',
 
     requires: [
-        'RTSBapp.view.TouchTreeGrid'
+        'TouchTreeGrid.view.TouchTreeGrid',
+        'Ext.ux.PinchZoomImage'
     ],
 
     config: {
@@ -64,7 +65,6 @@ Ext.define('RTSBapp.view.CensusContainer', {
                         xtype: 'container',
                         title: 'FilterEx',
                         cls: 'census-filter-cont',
-                        hidden: true,
                         itemId: 'censusfiltercont',
                         layout: {
                             type: 'card'
@@ -96,7 +96,6 @@ Ext.define('RTSBapp.view.CensusContainer', {
                                             'x-touchtreegrid-list',
                                             'x-touchtreegrid-list-censusmaine'
                                         ],
-                                        hidden: false,
                                         itemId: 'censusfilter'
                                     },
                                     {
@@ -162,6 +161,7 @@ Ext.define('RTSBapp.view.CensusContainer', {
                 tabBar: {
                     cls: 'projectTabBar',
                     docked: 'top',
+                    hidden: true,
                     style: 'background-image: -webkit-linear-gradient(top, rgb(86, 167, 223), rgb(43, 145, 215) 3%, rgb(33, 117, 175));',
                     ui: 'light'
                 }
@@ -181,6 +181,9 @@ Ext.define('RTSBapp.view.CensusContainer', {
             censusmaine.setCls(['x-touchtreegrid-list', 'x-touchtreegrid-list-censusmaine-phone']);
             censusfilter.setCls(['x-touchtreegrid-list', 'x-touchtreegrid-list-censusmaine-phone']);
         }
+
+
+
     }
 
 });

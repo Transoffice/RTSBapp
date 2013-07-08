@@ -13,15 +13,15 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('RTSBapp.store.Dow2012Horiz', {
+Ext.define('TouchTreeGrid.store.Dow2012Horiz', {
     extend: 'Ext.data.Store',
 
     requires: [
-        'RTSBapp.model.Dow2012'
+        'TouchTreeGrid.model.Dow2012'
     ],
 
     config: {
-        model: 'RTSBapp.model.Dow2012',
+        model: 'TouchTreeGrid.model.Dow2012',
         storeId: 'Dow2012Horiz',
         proxy: {
             type: 'ajax',

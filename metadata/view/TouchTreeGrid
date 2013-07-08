@@ -107,6 +107,9 @@
         ],
         "designer|userClassName": "TouchTreeGrid",
         "designer|userAlias": "touchtreegrid",
+        "requires": [
+            "Ext.ux.PinchZoomImage"
+        ],
         "layout": "vbox",
         "scrollable": null
     },

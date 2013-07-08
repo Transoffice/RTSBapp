@@ -13,14 +13,14 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('RTSBapp.controller.CommonController', {
+Ext.define('TouchTreeGrid.controller.CommonController', {
     extend: 'Ext.app.Controller',
 
     config: {
         refs: {
-            main: {
-                selector: 'main',
-                xtype: 'main'
+            rtsbapp: {
+                selector: 'rtsbapp',
+                xtype: 'rtsbapp'
             },
             griddetailpanel: {
                 autoCreate: true,
@@ -35,8 +35,8 @@ Ext.define('RTSBapp.controller.CommonController', {
         },
 
         control: {
-            "tabpanel#maintabpanel": {
-                activeitemchange: 'onMainTabpanelActiveItemChange'
+            "tabpanel#RTSBPanel": {
+                activeitemchange: 'onRTSBPanelActiveItemChange'
             },
             "viewport": {
                 orientationchange: 'onOrientationChange'
@@ -49,31 +49,27 @@ Ext.define('RTSBapp.controller.CommonController', {
             },
             "button#helpPanelCloseBtn": {
                 tap: 'onHelpPanelCloseButtonTap'
+            },
+            "tabpanel#LanguagePanel": {
+                activeitemchange: 'onLanguagePanelTopChange'
             }
         }
     },
 
-    onMainTabpanelActiveItemChange: function(container, value, oldValue, eOpts) {
+    onRTSBPanelActiveItemChange: function(container, value, oldValue, eOpts) {
         var newcont = value.getItemId();
         var grid, gridcont, numNodes, mydata, numRecords;
 
         gridcont = value.down('touchtreegrid');
         grid = gridcont.down('#'+gridcont.getListItemId());
 
-        if (newcont === 'censustab') {
+        if (newcont === 'ViewPanel') {
 
             // Check store for data and load if empty (only)
             numNodes = grid.getStore().getData().length;
             if (numNodes === 0) {censusController.loadCensusMaine2000Store();}  
         }
-
-        if (newcont === 'projecttab'){
-            // Check store for data and load if empty (only)
-            numNodes = grid.getStore().getData().length;
-            if (numNodes === 0) {projectController.loadExample2Store(gridcont);}  
-        }
-
-        if (newcont === 'listscontainer'){
+        if (newcont === 'HomePanel') {
             numRecords = grid.getStore().getData().length;
             if (numRecords === 0) {
                 Ext.Viewport.setMasked({
@@ -85,6 +81,19 @@ Ext.define('RTSBapp.controller.CommonController', {
                 Ext.Viewport.setMasked(false);
             }  
         }
+        if (newcont === 'Impressum'){
+            // Check store for data and load if empty (only)
+            numNodes = grid.getStore().getData().length;
+            if (numNodes === 0) {projectController.loadExample2Store(gridcont);}  
+        }
+
+        if (newcont === 'overlay')
+        {
+
+
+        }
+
+
 
 
 
@@ -98,7 +107,6 @@ Ext.define('RTSBapp.controller.CommonController', {
         // active window contains TouchGridPanel with active expand/collapse toolbar
         var gridcont = this.hideShowPanels();
         var gridItemId = gridcont.getItemId();
-
         // Demo reconfiguring columns array for Census example based on device and orientation
         if (gridItemId === 'censusmaine' || gridItemId === 'censusfilter') {
             censusController.loadColumnsCensusMaine(gridcont);
@@ -112,10 +120,10 @@ Ext.define('RTSBapp.controller.CommonController', {
         var image = main.down('#gridhelp');
 
 
-        var currItem = Ext.Viewport.down('#maintabpanel').getActiveItem();
+        var currItem = Ext.Viewport.down('#RTSBPanel').getActiveItem();
 
         var grid;
-        if (currItem.getItemId() === 'projecttab') {
+        if (currItem.getItemId() === 'Impressum') {
             // Project example contained within sub tab panel so need to get active item of that 
             grid = currItem.down('#projecttabpanel').getActiveItem().down('touchtreegrid');
         } 
@@ -131,7 +139,7 @@ Ext.define('RTSBapp.controller.CommonController', {
             // Lists example contained within sub tab panel so need to get active item of that 
             grid = currItem.down('#tasksTabPanel').getActiveItem().down('touchtreegrid');
         } else
-        {   
+        {    
             grid = currItem.down('touchtreegrid');
         }   
 
@@ -167,6 +175,33 @@ Ext.define('RTSBapp.controller.CommonController', {
 
     onHelpPanelCloseButtonTap: function(button, e, eOpts) {
         button.up('gridHelpPanel').hide();
+    },
+
+    onLanguagePanelTopChange: function(container, value, oldValue, eOpts) {
+        var newcont = value.getItemId();
+        var grid, gridcont, numNodes, mydata, numRecords;
+
+        gridcont = value.down('touchtreegrid');
+        grid = gridcont.down('#'+gridcont.getListItemId());
+
+        if (newcont === 'DeutschPanel') {
+
+            // Check store for data and load if empty (only)
+            numNodes = grid.getStore().getData().length;
+            if (numNodes === 0) {censusController.loadCensusMaine2000Store();}  
+        }
+
+        if (newcont === 'EnglishPanel'){
+            // Check store for data and load if empty (only)
+            numNodes = grid.getStore().getData().length;
+            if (numNodes === 0) {censusController.loadCensusMaine2000Store();}  
+        }
+
+        if (newcont === 'RussianPanel'){
+            // Check store for data and load if empty (only)
+            numNodes = grid.getStore().getData().length;
+            if (numNodes === 0) {censusController.loadCensusMaine2000Store();}  
+        }
     },
 
     loadTree: function(collapseLevel, ArrRef, fldListArr, gridcont, rootVal, hasTopRoot, filterOpts, skipApplyDefaultCollapseLevel) {
@@ -357,20 +392,20 @@ Ext.define('RTSBapp.controller.CommonController', {
 
         // Call funciton to hide/show titlebar and bottom tabbar when in landscape mode, but only if
         // active window contains TouchGridPanel with active expand/collapse toolbar
-        var currItem = Ext.Viewport.down('#maintabpanel').getActiveItem();
+        var currItem = Ext.Viewport.down('#RTSBPanel').getActiveItem();
 
         var collapseBar, projex=false, gridcont;
-        if (currItem.getItemId() === 'projecttab') {
+        if (currItem.getItemId() === 'Impressum') {
             // Project example contained within sub tab panel so need to get active item of that 
             projex=true;
             collapseBar = currItem.down('#projecttabpanel').getActiveItem().down('#touchtreegridbuttons');
             gridcont = currItem.down('#projecttabpanel').getActiveItem().down('touchtreegrid');
         } 
-        else if (currItem.getItemId() === 'censustab') {
+        else if (currItem.getItemId() === 'ViewPanel') {
             collapseBar = currItem.down('#censustabpanel').getActiveItem().down('#touchtreegridbuttons');
             gridcont = currItem.down('#censustabpanel').getActiveItem().down('touchtreegrid');    
         } 
-        else if (currItem.getItemId() === 'tasklisttab') {
+        else if (currItem.getItemId() === 'HomePanel') {
             collapseBar = currItem.down('#tasklisttab').getActiveItem().down('#touchtreegridbuttons');
             gridcont = currItem.down('#tasklisttab').getActiveItem().down('touchtreegrid');    
         } 
@@ -381,27 +416,31 @@ Ext.define('RTSBapp.controller.CommonController', {
         else{    
             collapseBar = currItem.down('#touchtreegridbuttons');
             gridcont = currItem.down('touchtreegrid');        
-        }    
+        }   
 
         var hide = (orient === 'landscape');
 
         // Hide bottom tabbar and titlebar for phones in landscape mode ... show in portrait mode
 
-        if (device === 'phone') {
-            var main = this.getMain();
+        /*if (device === 'phone')
+        {
+        var main = this.getMain();
 
-            main.down('#maintitlebar').setHidden(hide);
-            main.down('#maintabbar').setHidden(hide);
+        main.down('#maintitlebar').setHidden(hide);
+        main.down('#maintabbar').setHidden(hide);
 
-            // I could add logic for Project tab to add this for each tab in event user tabs to different example
-            // if (projex) {....} else {...}
+        main.down('#LanguagePanel').setHidden(hide);
+        main.down('#RTSBPanel').setHidden(hide);
 
-            if (!Ext.isEmpty(collapseBar)) {
-                collapseBar.down('#touchtreegridlabel').setHtml(hide ? 'Rotate for Menu' : '');
-                collapseBar.down('#touchtreegridicon').setHidden(!hide);
-            }  
-        }
-        return gridcont;
+        // I could add logic for Project tab to add this for each tab in event user tabs to different example
+        // if (projex) {....} else {...}
+
+        if (!Ext.isEmpty(collapseBar)) {
+            collapseBar.down('#touchtreegridlabel').setHtml(hide ? 'Rotate for Menu' : '');
+            collapseBar.down('#touchtreegridicon').setHidden(!hide);
+        }  
+    }*/
+    return gridcont;
 
     },
 

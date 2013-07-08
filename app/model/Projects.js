@@ -13,7 +13,7 @@
  * Do NOT hand edit this file.
  */
 
-Ext.define('RTSBapp.model.Projects', {
+Ext.define('TouchTreeGrid.model.Projects', {
     extend: 'Ext.data.Model',
 
     config: {

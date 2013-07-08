@@ -1,0 +1,278 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "itemId": "rtsbapp",
+        "designer|userClassName": "RTSBapp",
+        "designer|userAlias": "rtsbapp",
+        "requires": [
+            "Ext.ux.PinchZoomImage"
+        ]
+    },
+    "designerId": "deac2e5a-1182-43e8-b8ba-4b6263ca02a0",
+    "cn": [
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom",
+                "height": "100%",
+                "id": null,
+                "itemId": "RTSBPanel",
+                "designer|displayName": null,
+                "designer|createAlias": null
+            },
+            "designerId": "73a2c3b0-5205-47ff-93e5-3aa9b142ee29",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Home",
+                        "iconCls": "home",
+                        "height": "100%",
+                        "itemId": "HomePanel"
+                    },
+                    "designerId": "c4726b36-5c37-4471-8b31-bf5424dd0db1",
+                    "cn": [
+                        {
+                            "type": "linkedinstance",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "designerId": "db9a5336-a1fd-499d-b542-42d00d312375",
+                            "masterInstanceId": "2c9a64bf-c048-4811-b743-90c70542d8f6"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "View",
+                        "iconCls": "star",
+                        "itemId": "ViewPanel"
+                    },
+                    "designerId": "8660ca4e-80ec-46cc-b2ec-5a9fe038e434",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "container|animation": "slide",
+                                "height": "100%",
+                                "id": "Languag",
+                                "itemId": "LanguagePanel"
+                            },
+                            "designerId": "288487fc-ad2f-4399-9d39-b71f73ec1b40",
+                            "cn": [
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "title": "Deutsch",
+                                        "itemId": "DeutschPanel"
+                                    },
+                                    "designerId": "8a51674b-9d67-446b-84e2-a778f03051e6",
+                                    "cn": [
+                                        {
+                                            "type": "linkedinstance",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "height": "100%"
+                                            },
+                                            "designerId": "f23e8edf-96f9-454c-b729-b86b3f725369",
+                                            "masterInstanceId": "27f12204-ed18-4d2a-a68d-327fc5755833"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "title": "English",
+                                        "itemId": "EnglishPanel"
+                                    },
+                                    "designerId": "dc87f232-ff02-4098-9247-f12613b936eb",
+                                    "cn": [
+                                        {
+                                            "type": "linkedinstance",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "height": "100%"
+                                            },
+                                            "designerId": "00585d1c-6246-4a99-a10a-8b5ba7e5e7a8",
+                                            "masterInstanceId": "27f12204-ed18-4d2a-a68d-327fc5755833"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "title": "Russian",
+                                        "itemId": "RussianPanel"
+                                    },
+                                    "designerId": "5bee92ed-52df-4614-b386-420e3665e6a7",
+                                    "cn": [
+                                        {
+                                            "type": "linkedinstance",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "height": "100%"
+                                            },
+                                            "designerId": "93677114-606a-4efe-991f-97c9c9f0a866",
+                                            "masterInstanceId": "27f12204-ed18-4d2a-a68d-327fc5755833"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.tab.Bar",
+                                    "reference": {
+                                        "name": "tabBar",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "container|pack": "center",
+                                        "docked": "top",
+                                        "height": null,
+                                        "hideAnimation": null,
+                                        "id": "langege",
+                                        "showAnimation": null,
+                                        "hideOnMaskTap": null
+                                    },
+                                    "designerId": "d820c94c-d299-43ba-b2e9-8f581a475a99"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Impressum",
+                        "iconCls": "info",
+                        "itemId": "Impressum"
+                    },
+                    "designerId": "5cad0309-551e-462c-b763-8e2e1cfb3cd6",
+                    "cn": [
+                        {
+                            "type": "linkedinstance",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": "100%",
+                                "designer|createAlias": null
+                            },
+                            "designerId": "1a41538d-6b63-429d-8ad1-899c54f31f91",
+                            "masterInstanceId": "34e87089-9f09-4c61-9b97-8fcb52f62e0d"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.tab.Bar",
+                    "reference": {
+                        "name": "tabBar",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "bottom",
+                        "id": "RTSBhm"
+                    },
+                    "designerId": "c55d4f61-3329-447a-be65-348466d7357a"
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Impr",
+                        "iconCls": "info",
+                        "data": null,
+                        "itemId": "Impr",
+                        "masked": null
+                    },
+                    "designerId": "1fb29798-3e3c-4bb0-8dc4-c23064e68d8c",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "listeners",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "linkedinstance",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "designerId": "5587b299-5087-48d3-ae9d-b72d52f08070",
+                            "masterInstanceId": "d5e92c2d-cc5c-4e78-95cc-646aa7a0b284"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

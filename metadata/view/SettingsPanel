@@ -1,0 +1,66 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "width": 240,
+        "designer|userClassName": "SettingsPanel",
+        "designer|userAlias": "settings",
+        "hideOnMaskTap": true,
+        "modal": true
+    },
+    "designerId": "308eaac2-e74f-4ecd-83ef-16972f49586d",
+    "cn": [
+        {
+            "type": "Ext.field.Checkbox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "label": "Field"
+            },
+            "designerId": "d0fa2346-9deb-4b14-8bfd-db1bf887cb28"
+        },
+        {
+            "type": "Ext.field.Checkbox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "label": "Field"
+            },
+            "designerId": "1bc3a526-8fe6-457b-bf1f-4678f6831d24"
+        },
+        {
+            "type": "Ext.field.Checkbox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "label": "Field"
+            },
+            "designerId": "c097551d-730f-41b4-a898-9f4015b75c5e"
+        },
+        {
+            "type": "Ext.field.Checkbox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "label": "Field"
+            },
+            "designerId": "4be0f11f-edc4-4f61-85c4-982bc0c6d8e2"
+        }
+    ]
+}
