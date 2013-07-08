@@ -37,6 +37,7 @@
             "codeClass": null,
             "userConfig": {
                 "height": "100%",
+                "hidden": true,
                 "designer|createAlias": "pinchzoomimage",
                 "src": "./resources/images/RTSBapp_loading_bg.png"
             },

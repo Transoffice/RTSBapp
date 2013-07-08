@@ -36,14 +36,6 @@ Ext.define('TouchTreeGrid.view.CensusDetailPanel', {
                 },
                 items: [
                     {
-                        xtype: 'button',
-                        itemId: 'censusdetailbackbtn',
-                        maxWidth: 80,
-                        minWidth: 80,
-                        ui: 'back',
-                        text: 'Back'
-                    },
-                    {
                         xtype: 'spacer',
                         width: 10
                     },
@@ -52,18 +44,134 @@ Ext.define('TouchTreeGrid.view.CensusDetailPanel', {
                         itemId: 'censusdetaillabel',
                         maxWidth: '10em',
                         style: 'color : white'
+                    },
+                    {
+                        xtype: 'button',
+                        itemId: 'censusdetailbackbtn',
+                        maxWidth: 80,
+                        minWidth: 80,
+                        ui: 'back',
+                        text: 'Back'
                     }
                 ]
             },
             {
                 xtype: 'tabpanel',
+                activeItem: 2,
                 docked: 'top',
                 height: '100%',
                 hidden: false,
                 items: [
                     {
                         xtype: 'container',
+                        title: 'Map',
+                        hidden: false,
+                        items: [
+                            {
+                                xtype: 'container',
+                                cls: 'censusmapSet',
+                                height: '70em',
+                                maxHeight: '70em',
+                                minHeight: '70em',
+                                layout: {
+                                    type: 'vbox'
+                                },
+                                items: [
+                                    {
+                                        xtype: 'fieldset',
+                                        height: '70em',
+                                        hidden: false,
+                                        itemId: 'censusmapSet',
+                                        maxHeight: '70em',
+                                        minHeight: '70em',
+                                        scrollable: false,
+                                        items: [
+                                            {
+                                                xtype: 'pinchzoomimage',
+                                                height: '40em',
+                                                itemId: 'censusMapImage',
+                                                src: './resources/images/RTSBapp_loading_bg.png'
+                                            },
+                                            {
+                                                xtype: 'label',
+                                                hidden: true,
+                                                itemId: 'censusMapImage2'
+                                            },
+                                            {
+                                                xtype: 'textfield',
+                                                hidden: true,
+                                                inputCls: 'detailtextfields',
+                                                label: 'Field',
+                                                labelWidth: '60%',
+                                                readOnly: true
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'container',
+                        title: 'Details',
+                        hidden: false,
+                        items: [
+                            {
+                                xtype: 'container',
+                                cls: 'censusDetailSet',
+                                docked: 'top',
+                                height: '70em',
+                                hidden: false,
+                                maxHeight: '70em',
+                                minHeight: '70em',
+                                layout: {
+                                    type: 'fit'
+                                },
+                                items: [
+                                    {
+                                        xtype: 'fieldset',
+                                        height: '70em',
+                                        hidden: false,
+                                        itemId: 'censusDetailSet',
+                                        maxHeight: '70em',
+                                        minHeight: '70em',
+                                        layout: {
+                                            type: 'fit'
+                                        },
+                                        scrollable: false,
+                                        items: [
+                                            {
+                                                xtype: 'image',
+                                                itemId: 'censusDetailImage',
+                                                src: './resources/images/RTSBapp_loading_bg.png'
+                                            },
+                                            {
+                                                xtype: 'textfield',
+                                                hidden: true,
+                                                label: 'Field'
+                                            },
+                                            {
+                                                xtype: 'pinchzoomimage',
+                                                height: '100%',
+                                                hidden: false,
+                                                itemId: 'censusDetailImage2'
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                xtype: 'container',
+                                src: './resources/images/RTSB_Eastbound_EU-BALTIKUM-GUS.png',
+                                height: '100%',
+                                hidden: true
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'container',
                         title: 'Routs',
+                        hidden: false,
                         items: [
                             {
                                 xtype: 'toolbar',
@@ -166,102 +274,10 @@ Ext.define('TouchTreeGrid.view.CensusDetailPanel', {
                     },
                     {
                         xtype: 'container',
-                        title: 'Map',
-                        items: [
-                            {
-                                xtype: 'container',
-                                cls: 'censusmapSet',
-                                height: '70em',
-                                maxHeight: '70em',
-                                minHeight: '70em',
-                                layout: {
-                                    type: 'vbox'
-                                },
-                                items: [
-                                    {
-                                        xtype: 'fieldset',
-                                        height: '70em',
-                                        hidden: false,
-                                        itemId: 'censusmapSet',
-                                        maxHeight: '70em',
-                                        minHeight: '70em',
-                                        scrollable: false,
-                                        items: [
-                                            {
-                                                xtype: 'label',
-                                                itemId: 'censusMapImage'
-                                            },
-                                            {
-                                                xtype: 'textfield',
-                                                hidden: true,
-                                                inputCls: 'detailtextfields',
-                                                label: 'Field',
-                                                labelWidth: '60%',
-                                                readOnly: true
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        xtype: 'container',
-                        title: 'Details',
-                        items: [
-                            {
-                                xtype: 'container',
-                                cls: 'censusDetailSet',
-                                docked: 'top',
-                                height: '70em',
-                                hidden: true,
-                                maxHeight: '70em',
-                                minHeight: '70em',
-                                layout: {
-                                    type: 'fit'
-                                },
-                                items: [
-                                    {
-                                        xtype: 'fieldset',
-                                        height: '70em',
-                                        hidden: false,
-                                        itemId: 'censusDetailSet',
-                                        maxHeight: '70em',
-                                        minHeight: '70em',
-                                        layout: {
-                                            type: 'fit'
-                                        },
-                                        scrollable: false,
-                                        items: [
-                                            {
-                                                xtype: 'textfield',
-                                                hidden: true,
-                                                label: 'Field'
-                                            },
-                                            {
-                                                xtype: 'pinchzoomimage',
-                                                height: '100%',
-                                                hidden: true,
-                                                itemId: 'censusDetailImage'
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                xtype: 'pinchzoomimage',
-                                src: './resources/images/RTSB_Eastbound_EU-BALTIKUM-GUS.png',
-                                height: '100%',
-                                items: [
-                                    {
-                                        xtype: 'pinchzoomimage',
-                                        height: 201,
-                                        hidden: false,
-                                        src: './resources/images/RTSB_Eastbound_EU-BALTIKUM-GUS.png'
-                                    }
-                                ]
-                            }
-                        ]
+                        title: 'Test',
+                        height: 414,
+                        hidden: true,
+                        scrollable: true
                     }
                 ],
                 tabBar: {

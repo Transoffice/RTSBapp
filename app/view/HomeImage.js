@@ -31,6 +31,7 @@ Ext.define('TouchTreeGrid.view.HomeImage', {
             {
                 xtype: 'pinchzoomimage',
                 height: '100%',
+                hidden: true,
                 src: './resources/images/RTSBapp_loading_bg.png'
             }
         ]

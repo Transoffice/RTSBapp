@@ -1,16 +1,3 @@
-/**
- * Pinch Zoom Image for Sencha Touch 2
- * 
- * requieres the Transform.js file for the transformation of canvas
- *
- * @author Sang Oh <swoh77@gmail.com>
- * 
- * This source is orignated from Zooming via HTML5 Canvas Context and restructured into sencha touch.
- * Origin : http://phrogz.net/tmp/canvas_zoom_to_cursor.html
- *          author Gavin Kistner < mailto:!@phrogz.net >
- * 
- */
-
 Ext.define('Ext.ux.PinchZoomImage', {
 	extend:'Ext.Container',
 	xtype:'pinchzoomimage',

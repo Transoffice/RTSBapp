@@ -140,8 +140,8 @@ Ext.define('TouchTreeGrid.controller.CensusController', {
 
                 var fldSet3 = newcont.down('#censusMapImage');
                 var maplink = record.get('MAP'); 
-                fldSet3.setHtml('<div style="background-image:url('+maplink+');height:1024px;width:100%;background-repeat:no-repeat;background-size: 100%;">'); 
-
+                //fldSet3.setHtml('<div style="background-image:url('+maplink+');height:1024px;width:100%;background-repeat:no-repeat;background-size: 100%;">'); 
+                fldSet3.setSrc(record.get('MAP'));   
                 var fldSet4 = newcont.down('#censusDetailImage');
                 var detaillink = record.get('DETAILS'); 
                 //fldSet4.setHtml('<div style="background-image:url('+detaillink+');height:1024px;width:100%;background-repeat:no-repeat;background-size: 100%;">'); 
